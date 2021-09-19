@@ -2,13 +2,41 @@
 <html lang="en">
 
 <meta charset="utf-8">
-<title>&lt;&gt;</title>
+<title>&lt;details&gt;</title>
 <!-- &lt; &gt; -->
 
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Details - &lt;details&gt;</h1>
+    <p>The details element encloses hidden information  that the user can open on demand</p>
+    <p>An interactive widget is used to open and close the hidden content. By default the widget is closed. When opened the content is displayed</p>
+    <p>Any content can go inside the details tag</p>
+    <p>The summary tag is used alongside the details tag in order to supply a heading, as the default heading is "Details"</p>
+    <p>There is no built in way to animate the transition betweeen open and closed.</p>
+    <p>The triangular widget can be customised or hidden!</p>
+    
+    <br>
+
+    <h2>Examples:</h2>
+    <details>
+        <summary>Details summary!</summary>
+        <p>Paragraph inside of a details element!</p>
+    </details>
+    <details open>
+        <summary>Second open details summary!</summary>
+        <p>Second Paragraph inside of a details element!</p>
+    </details>
+
+    <br>
+
+    <h2>Default Styling:</h2>
+    <img src="media/images/defaultStyles/detailsDefault.jpg">
+
+    <br>
+
+    <h2>Attributes:</h2>
+    <p>The details tag has an open attribute which is used to specifiy the details that are visible to the user.</p>
+    <p>The global and event attributes are supported.</p>
     
 </body>
 </html>
