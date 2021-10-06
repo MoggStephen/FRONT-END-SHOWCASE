@@ -3,7 +3,7 @@
 
 <meta charset="utf-8">
 <head>
-    <base href="https://">
+    <base href="https://www.coingecko.com/">
 </head>
 <title>&lt;base&gt;</title>
 <!-- &lt; &gt; -->
@@ -14,13 +14,54 @@
     <p>The base element is used to specify a base url for all relative URL's in a document</p>
     <p>The base tag must contain a href or target attribute. Or both!</p>
     <p>There can only be one single base element in a document, and importantly it must be in the head element!</p>
-    <p>Typically to best use this the base url should end with a / or the the url tag should start with a /. The base doesnt seem to work with the base - "https://"</p>
+    <p>Typically to best use this the base url should end with a / or the the url tag should start with a /.</p>
+    <p>A / gets added to the url when no / is present at the end of the base url or the start of the hyperlinks url.</p>
+    <p>An about blank blocked issue seems to arise when using the base url of 'https://'. I think this is because a base url of the starting url for all webpages is unsafe and immediately blocked?</p>
+    <p>The base tag can also be used to direct to a webpage too but the same premise of / use is required</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <a href="www.coingecko.com/en">CoinGecko</a>
-    <a href=""></a>
+    <h3>URL Hyperlinks:</h3>
+    <table>
+        <tr>
+            <th>|WORKS</th>
+            <th>|METHOD</th>
+            <th>|BASE URL</th>
+            <th>|HYPERLINK URL</th>
+            <th>|LINK|</th>
+        </tr>
+        <tr>
+            <th>|Correct!</th>
+            <th>|Slash at end of base</th>
+            <th>|https://www.coingecko.com/</th>
+            <th>|en</th>
+            <th>|<a href="en">CoinGecko</a>|</th>
+        </tr>
+        <tr>
+            <th>|Correct!</th>
+            <th>|Slash at start of hyperlink</th>
+            <th>|https://www.coingecko.com</th>
+            <th>|/en</th>
+            <th>|<a href="en">CoinGecko</a>|</th>
+        </tr>
+        <tr>
+            <!--The base tag needs to be changed to do this example properly! For now we just show a wrong url-->
+            <th>|Incorrect!</th>
+            <th>|No slash at the base end or hyperlink start</th>
+            <th>|https://www.coingecko</th>
+            <th>|.com/en</th>
+            <th>|<a href="/purposefullyWrongUrl">CoinGecko</a>|</th>
+        </tr>
+        <tr>
+            <!--The base tag needs to be changed to do this example properly too! For now we just show a wrong url-->
+            <th>|Incorrect!</th>
+            <th>|base of https://</th>
+            <th>|https://</th>
+            <th>|www.coingecko.com/en</th>
+            <th>|<a href="/purposefullyWrongUrl">CoinGecko</a>|</th>
+        </tr>
+    </table>
 
     <br>
 
