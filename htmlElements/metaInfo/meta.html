@@ -3,14 +3,62 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Meta element">
+    <meta name="description" content="Meta html element">
+    <meta name="author" content="Stephen Mogg">
+    <meta http-equiv="refresh" content="30">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>&lt;meta&gt;</title>
 </head>
 
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Meta - &lt;meta&gt;</h1>
+    <p>The meta element describes metadata (data about data) in the html document.</p>
+    <p>The meta tag has to be placed inside of a head element.</p>
+    <p>The meta tag is typically used to specify the following</p>
+    <li>Character set(this one needs to be done in every document)</li>
+    <li>Page description</li>
+    <li>Keywords</li>
+    <li>Author of the document</li>
+    <li>Viewport settings</li>
+    <p>This data is not displayed on the webpage but is machine readable</p>
+    <p>Metadata is used by browsers in order to display content or reload pages</p>
+    <p>Metadata is used by search engines to get the keywords associated with a webpage.</p>
+    <p>Metadata on a whole is used by lost of web services</p>
+
+    <br>
+
+    <h2>View port manipulation</h2>
+    <p>There is a method that allows web designers to take control of the viewport. The view port is the visible area of a webpage.</p>
+    <p>The viewport varies with the device and it will be smaller on mobile phones than on a computer display.</p>
+    <p>It can be very usefull to add the following meta tag into all of your webpages in order to have a responsive web design.(suiting all sizes of screens)</p>
+    <img src="media/images/examples/viewPortExample.jpg">
+    <p>The width part of the contents sets the width of the page to follow the current devices screen width.</p>
+    <p>The initial scale part sets the initial zoom level when the page is first loaded.</p>
+    <p>The following image shows the difference:</p>
+    <img src="media/images/examples/viewPortDifferenceExample.jpg">
+
+    <br>
+
+    <h2>Examples:</h2>
+    <img src="media/images/examples/metaExample.jpg">
+
+    <br>
+
+    <h2>Default Styling:</h2>
+    <p>None</p>
+
+    <br>
+
+    <h2>Attributes:</h2>
+    <p>The global attribute is supported.</p>
+    <p>The charset attribute is supported to specify the character endcoding for the document. This is always utf-8 for html5 documents.</p>
+    <p>The content attribute is supported which is used to specify the text value associated with this meta tags use</p>
+    <p>The http-equiv attribute is used to provide a HTTP header for the information/value of the content attribute. Allowed values are all HTTP headers</p>
+    <p>The name attribute is used to specify a name for the metadata.</p>
     
 </body>
 </html>

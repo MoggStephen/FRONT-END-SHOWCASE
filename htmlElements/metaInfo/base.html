@@ -15,6 +15,7 @@
     <p>The base element is used to specify a base url for all relative URL's in a document</p>
     <p>The base tag must contain a href or target attribute. Or both!</p>
     <p>There can only be one single base element in a document, and importantly it must be in the head element!</p>
+    <p>Typically in a head element their are links. You should ensure the base element goes above this!</p>
     <p>Typically to best use this the base url should end with a / or the the url tag should start with a /.</p>
     <p>A / gets added to the url when no / is present at the end of the base url or the start of the hyperlinks url.</p>
     <p>An about blank blocked issue seems to arise when using the base url of 'https://'. I think this is because a base url of the starting url for all webpages is unsafe and immediately blocked?</p>
@@ -73,7 +74,7 @@
     <br>
 
     <h2>Attributes:</h2>
-    <p>The href attribute is used to supply the base url for all relative urls!</p>
+    <p>The href attribute is used to supply the base elements url for all relative urls!</p>
     <p>The target attribute is used to supply targets for the hyperlinks and forms in the page! _blank, _parent, _self, _top.</p>
     <p>The global attributes are supported</p>
     
