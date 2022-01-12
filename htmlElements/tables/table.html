@@ -13,22 +13,57 @@
 <body>
 
     <h1>Table - &lt;table&gt;</h1>
-    <p>The table tag simply creates a table on the webpage. This table can have columns and rows added to it.</p>
+    <p>The table tag defines an HTML table on the webpage.</p>
+    <p>The table consists of the table tag and then one or more &lt;tr&gt;, &lt;th&gt; and &lt;td&gt; elements</p>
+    <p>tr defines a table row. th defines a table header, and the td element defines a table cell</p>
+    <p>A HTML table may also include &lt;caption&gt;, &lt;colgroup&gt;, &lt;thead&gt;, &lt;tfoot&gt;, and &lt;tbody&gt; elements</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <p>This a table with all of its elements included appropriately:</p>
+
+    <table>
+        <caption>HTML Table caption</caption>
+        <colgroup>
+            <col style="background-color: green;">
+            <col style="background-color: greenyellow;">
+            <col style="background-color: hotpink;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Table heading cell 1</th>
+                <td>Table heading cell 2</td>
+                <td>Table heading cell 3</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Table body cell 1</td>
+                <td>Table body cell 2</td>
+                <td>Table body cell 3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Table footer cell 1</td>
+                <td>Table footer cell 2</td>
+                <td>Table footer cell 3</td>
+            </tr>
+        </tfoot>
+    </table>   
+    <p>This is how its coded:</p>
+    <img src="media/examples/tableExample.png">
 
     <br>
 
     <h2>Default Styling:</h2>
-    <p>None</p>
+    <img src="media/defaultStyles/tableDefault.png">
 
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>The global and event attributes are supported.</p>
     
 </body>
 </html>
