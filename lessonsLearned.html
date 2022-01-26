@@ -10,6 +10,43 @@
 <body>
     <h1>Lessons Learned</h1>
     <div>
+        <h3>Navigating through website structure using href attribute</h3>
+
+        <p>As ive been coding my website ive been using the "./"" to navigate to my media folders to display images. This is a relative path. A relative path is one that starts from
+            the current directory. For example the current directory of the audio.html file is "htmlElements\audioAndVideo". In order to get to the media folder 
+            to display an image i would need to use the relative path "./media". This accesses the current relative directory to the "htmlElements\audioAndVideo" so that i can 
+            access the media folder there. If i wanted to back a directory i would use "../" which would take me to the "htmlElements" directory.
+        </p>
+        <p>From here on out if i wanted to go back more than 1 directoriy the method to do this changes. To go back 2 directories which in this website takes us back to the root
+            of the website the method to do this is "../../". From here on out adding one more "../" takes us one more directory back relatively. In this case doing "../../" does 
+            take us to the root of the website however this is done relatively so it is not an absolute path.
+        </p>
+        <p>An absolute path always begins with "/" which accesses the root directory of the website. In the case of the website currently accessing the absolute path does 
+            not work. This is because the website is not setup with a server and browsers dont know the root of the website as im simply opening the website via its html from
+            its folder. In order to use an abosulte path and have it work i would need to run my website through a server which tells the browser what the root of the 
+            website is. Using the absolute path in vs code brings up the root of the website however the browser doesnt know that and the browser takes us to root directory
+            of the hard drive on my computer which is "file:///D:/". Running the website through a server should solve this.
+        </p>
+        <p>Ive just installed a live server extension which replicates a live environment for my website. Instead of simply opening my website through its html a live server and port is used.
+            In doing so now the browser knows where the root directory of my website is and i can now use absolute paths. Additionally saving a page will automatically refresh
+            the webpage open on my browser.
+        </p>
+    </div>
+    <div>
+        <h3>Interaction between base element and relative and absolute paths.</h3>
+
+        <p>As ive been updating my base element ive learnt some things. Supposedly the base element should only interact with relative paths however ive added what i thought was an 
+            absolute path but the base element interacted with it. So ive learnt some things about the types of paths that there are:
+        </p>
+        <li>Relative paths -----------------------------> href="audio.html"   ||   href="./audio.html"   ||   href="../"   ||   href="../../" and so on</li>
+        <li>A kind of absolute but still relative path -> href="/index.html"</li>
+        <li>An absolute path ---------------------------> href="http://127.0.0.1:5500/index.html"</li>
+        <li>A local absolute path on your system -------> href="D:\Stephen\Documents\websiteProgression\index.html"   ||   href="file:///D:\Stephen\Documents\websiteProgression\index.html"</li>
+        <p>So the base element interacts with the relative and kind of absolutes paths but not the absolute and local path. This means when a base is present we cant use a kind of
+            absolute path as this will mess with the path but anytime else we can. We cannot use local paths whilst the website is live on a server.
+        </p>
+    </div>
+    <div>
         <h2>html:5 thing</h2>
         <p></p>
     </div>
