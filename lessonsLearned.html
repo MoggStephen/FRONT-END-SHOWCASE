@@ -47,9 +47,28 @@
             absolute path as this will mess with the path but anytime else we can. We cannot use local paths whilst the website is live on a server.
         </p>
     </div>
+    tbody
     <div>
-        <h2>html:5 thing</h2>
-        <p></p>
+        <h2>Emmet shortcuts</h2>
+        <p>Emmet is an extension in vs code that has loads of shortcuts to speed up coding.</p>
+        <p>When creating a new html file you can simply type "!" and then press tab to add all of the require boilerplate code for the webpage.</p>
+        <p>When creating pretty much any element you can type the element without its angled brackets and press tab to create the element and set it up with its required attributes.</p>
+        <p>When creating elements with the emmet shortcuts. You can type the elements ammet abbreviation and then add a "." which adds a class attribute to the element. Any words typed after will be the value of the class attribute. For example -> "p.content" creates:</p>
+        <img src="./0media/images/emmetClassExample.png">
+        <p>This can be done for the id attribute as well with a "#". So typing the following -> "p#content2" creates the following:</p>
+        <img src="./0media/images/emmetIdExample.png">
+        <p>Typing these emmet abbreviations without an element beforehand emmet will defualt to creating a div element.</p>
+        <p>to get more complex this can involve creating nested elements. Typing an element to be nested inside of an element uses ">". So creating a div inside of a div with the first div containing a class and the nested div containing an id would look like this: ".content>#id"</p>
+        <img src="./0media/images/emmetNestedExample.png">
+        <p>To add multiple child elements you must use the "+" sign to add more nested elements inside the first. So -> ".content>#id+#id2" creates:</p>
+        <img src="./0media/images/emmetMultipleNestedExample.png">
+        <p>Adding multiple of the same element can be done with the "*" symbol. So -> ".content>#id*3" creates: (This is mostly done with creating lots of list items)</p>
+        <img src="./0media/images/emmetMultipleSameNestedExample.png">
+        <p>Lorem ipsum content can be created by typing "lorem" and then the nnumber of words you want. So -> "lorem20" creates:</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, repudiandae? Officiis distinctio sed quae quos itaque quis eveniet, mollitia neque.</p>
+        <p>We can use parentheses to generate however many elements we want. So -> "(.content)*5" creates:</p>
+        <img src="./0media/images/emmetParenthesesGeneration.png">
+        <p>When typing html emmet can be used to wrap the contents of the webpage so they fit onto the screen. This stops the need for halving the contents of any lines to fit onto the screen. This is done with "alt+z"</p>
     </div>
     <div>
         <h2>Comments</h2></div>

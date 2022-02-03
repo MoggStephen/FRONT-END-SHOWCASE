@@ -24,44 +24,43 @@
     <br>
 
     <h2>Examples:</h2>
-    <!--THIS NEEDS CHANGING AS THIS EXPLAINS THE ATTRIBUTE MORE THAN THE BASE ELEMENT-->
     <h3>URL Hyperlinks:</h3>
     <table>
         <tr>
-            <th>|WORKS</th>
-            <th>|METHOD</th>
-            <th>|BASE URL</th>
-            <th>|HYPERLINK URL</th>
+            <th>|WORKS|</th>
+            <th>|METHOD|</th>
+            <th>|BASE URL|</th>
+            <th>|HYPERLINK URL|</th>
             <th>|LINK|</th>
         </tr>
         <tr>
-            <th>|Correct!</th>
-            <th>|Slash at end of base</th>
-            <th>|https://www.coingecko.com/</th>
-            <th>|en</th>
+            <th>|Correct!|</th>
+            <th>|Slash at end of base|</th>
+            <th>|https://www.coingecko.com/|</th>
+            <th>|en|</th>
             <th>|<a href="en">CoinGecko</a>|</th>
         </tr>
         <tr>
-            <th>|Correct!</th>
-            <th>|Slash at start of hyperlink</th>
-            <th>|https://www.coingecko.com</th>
-            <th>|/en</th>
+            <th>|Correct!|</th>
+            <th>|Slash at start of hyperlink|</th>
+            <th>|https://www.coingecko.com|</th>
+            <th>|/en|</th>
             <th>|<a href="en">CoinGecko</a>|</th>
         </tr>
         <tr>
             <!--The base tag needs to be changed to do this example properly! For now we just show a wrong url-->
-            <th>|Incorrect!</th>
-            <th>|No slash at the base end or hyperlink start</th>
-            <th>|https://www.coingecko</th>
-            <th>|.com/en</th>
+            <th>|Incorrect!|</th>
+            <th>|No slash at the base end or hyperlink start|</th>
+            <th>|https://www.coingecko|</th>
+            <th>|.com/en|</th>
             <th>|<a href="/purposefullyWrongUrl">CoinGecko</a>|</th>
         </tr>
         <tr>
             <!--The base tag needs to be changed to do this example properly too! For now we just show a wrong url-->
-            <th>|Incorrect!</th>
-            <th>|base of https://</th>
-            <th>|https://</th>
-            <th>|www.coingecko.com/en</th>
+            <th>|Incorrect!|</th>
+            <th>|base of https://|</th>
+            <th>|https://|</th>
+            <th>|www.coingecko.com/en|</th>
             <th>|<a href="/purposefullyWrongUrl">CoinGecko</a>|</th>
         </tr>
     </table>
@@ -76,11 +75,11 @@
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported. 
-        <a href="htmlGlobalAttributes/htmlGlobalAttributes.html">Global</a>
+    <p>The global attributes are supported. 
+        <a href="http://127.0.0.1:5500/htmlGlobalAttributes\htmlGlobalAttributes.html">Global</a>
     </p>
-    <p>The href attribute is used to supply the base elements url for all relative urls!</p>
-    <p>The target attribute is used to supply targets for the hyperlinks and forms in the page! _blank, _parent, _self, _top.</p>
+    <p>The href attribute is used to supply the base elements url for all relative urls on then page. Example => "href="www.coingecko.""</p>
+    <p>The target attribute is used to supply the default targets for all hyperlinks and forms in the page! _blank, _parent, _self, _top. Example -> "target="_top""</p>
     
     
 </body>

@@ -12,25 +12,56 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Col - &lt;col&gt;</h1>
+    <p>The col tag specifies the properties for each column within a colgroup element.</p>
+    <p>It is used to apply styles to entire columns instead of repeating the styles for each cell, for each row.</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <table>
+        <colgroup>
+            <col span="1" style="background-color: brown;">
+            <col style="background-color: chartreuse;">
+            <col span="2" style="background-color: darkcyan;">
+        </colgroup>
+        <tr>
+            <th>heading 1</th>
+            <th>heading 2</th>
+            <th>heading 3</th>
+            <th>heading 4</th>
+        </tr>
+        <tr>
+            <th>cell 1</th>
+            <th>cell 2</th>
+            <th>cell 3</th>
+            <th>cell 4</th>
+        </tr>
+        <tr>
+            <th>cell 1</th>
+            <th>cell 2</th>
+            <th>cell 3</th>
+            <th>cell 4</th>
+        </tr>
+    </table>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/colExample.png" style="height: 400px">
 
     <br>
 
     <h2>Default Styling:</h2>
-    <p>None</p>
+    <img src="./media/defaultStyles/colDefault.png">
 
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>The global attributes are supported. 
+        <a href="/htmlGlobalAttributes/htmlGlobalAttributes.html">Global</a>
+    </p>
+    <p>The event atttributes are suported.
+        <a href="/htmlEventAttributes/htmlEventAttributes.html">Event Attributes</a>
+    </p>
+    <p>The span tag is used to specify the number of columns that the col element should span over which should always be a number. Example -> "span="2""</p>
     
 </body>
 </html>
