@@ -12,25 +12,47 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>td - &lt;td&gt;</h1>
+    <p>A td element defines a standard data cell in an html table.</p>
+    <p>A html table has two kind of cells</p>
+    <li>Header cells which contain header information created with the th element</li>
+    <li>Data cells which contain data created with the td element</li>
+    <p>The text in td element are regular and left aligned by default, whereas th elements are bold and centered by default</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <table>
+        <tr>
+            <th>row 1</th>
+        </tr>
+        <tr>
+            <td>row 2</td>
+        </tr>
+        <tr>
+            <td>row 3</td>
+        </tr>
+    </table>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/tdExample.png">
 
     <br>
 
     <h2>Default Styling:</h2>
-    <p>None</p>
+    <img src="./media/defaultStyles/tdDefault.png" alt="">
 
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>The global attributes are supported. 
+        <a href="/htmlGlobalAttributes/htmlGlobalAttributes.html">Global</a>
+    </p>
+    <p>The event atttributes are suported.
+        <a href="/htmlEventAttributes/htmlEventAttributes.html">Event Attributes</a>
+    </p>
+    <p>The colspan attribute is supported which defines a number of columns a cell should span. Example -> "colspan="2""</p>
+    <p>The headers attribute is supported which allows you to link to the id of specific heading cells. Example -> "headers="name""</p>
+    <p>The rowspan attribute is supported which defines a number of rows a cell should span. Example - > "rowspan="2""</p>
     
 </body>
 </html>
