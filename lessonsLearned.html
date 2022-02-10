@@ -9,8 +9,8 @@
 </head> 
 <body>
     <h1>Lessons Learned</h1>
-    <div>
-        <h3>Navigating through website structure using href attribute</h3>
+    <details> 
+        <summary>Navigating through website structure using href attribute</summary>
 
         <img src="0media/images/websiteStructure.png" style="height: 700px;">
         <p>As ive been coding my website ive been using the "./"" to navigate to my media folders to display images. This is a relative path. A relative path is one that starts from
@@ -32,24 +32,23 @@
             In doing so now the browser knows where the root directory of my website is and i can now use absolute paths. Additionally saving a page will automatically refresh
             the webpage open on my browser.
         </p>
-    </div>
-    <div>
-        <h3>Interaction between base element and relative and absolute paths.</h3>
+    </details>
+    <details>
+            <summary>Interaction between base element and relative and absolute paths.</summary>
 
-        <p>As ive been updating my base element ive learnt some things. Supposedly the base element should only interact with relative paths however ive added what i thought was an 
-            absolute path but the base element interacted with it. So ive learnt some things about the types of paths that there are:
-        </p>
-        <li>Relative paths -----------------------------> href="audio.html"   ||   href="./audio.html"   ||   href="../"   ||   href="../../" and so on</li>
-        <li>A kind of absolute but still relative path -> href="/index.html"</li>
-        <li>An absolute path ---------------------------> href="http://127.0.0.1:5500/index.html"</li>
-        <li>A local absolute path on your system -------> href="D:\Stephen\Documents\websiteProgression\index.html"   ||   href="file:///D:\Stephen\Documents\websiteProgression\index.html"</li>
-        <p>So the base element interacts with the relative and kind of absolutes paths but not the absolute and local path. This means when a base is present we cant use a kind of
-            absolute path as this will mess with the path but anytime else we can. We cannot use local paths whilst the website is live on a server.
-        </p>
-    </div>
-    tbody
-    <div>
-        <h2>Emmet shortcuts</h2>
+            <p>As ive been updating my base element ive learnt some things. Supposedly the base element should only interact with relative paths however ive added what i thought was an 
+                absolute path but the base element interacted with it. So ive learnt some things about the types of paths that there are:
+            </p>
+            <li>Relative paths -----------------------------> href="audio.html"   ||   href="./audio.html"   ||   href="../"   ||   href="../../" and so on</li>
+            <li>A kind of absolute but still relative path -> href="/index.html"</li>
+            <li>An absolute path ---------------------------> href="http://127.0.0.1:5500/index.html"</li>
+            <li>A local absolute path on your system -------> href="D:\Stephen\Documents\websiteProgression\index.html"   ||   href="file:///D:\Stephen\Documents\websiteProgression\index.html"</li>
+            <p>So the base element interacts with the relative and kind of absolutes paths but not the absolute and local path. This means when a base is present we cant use a kind of
+                absolute path as this will mess with the path but anytime else we can. We cannot use local paths whilst the website is live on a server.
+            </p>
+    </details>
+    <details>
+        <summary>Emmet shortcuts</summary>
         <p>Emmet is an extension in vs code that has loads of shortcuts to speed up coding.</p>
         <p>When creating a new html file you can simply type "!" and then press tab to add all of the require boilerplate code for the webpage.</p>
         <p>When creating pretty much any element you can type the element without its angled brackets and press tab to create the element and set it up with its required attributes.</p>
@@ -57,8 +56,8 @@
         <img src="./0media/images/emmetClassExample.png">
         <p>This can be done for the id attribute as well with a "#". So typing the following -> "p#content2" creates the following:</p>
         <img src="./0media/images/emmetIdExample.png">
-        <p>Typing these emmet abbreviations without an element beforehand emmet will defualt to creating a div element.</p>
-        <p>to get more complex this can involve creating nested elements. Typing an element to be nested inside of an element uses ">". So creating a div inside of a div with the first div containing a class and the nested div containing an id would look like this: ".content>#id"</p>
+        <p>Typing these emmet abbreviations without an element beforehand emmet will defualt to creating a details element.</p>
+        <p>to get more complex this can involve creating nested elements. Typing an element to be nested inside of an element uses ">". So creating a details inside of a details with the first details containing a class and the nested details containing an id would look like this: ".content>#id"</p>
         <img src="./0media/images/emmetNestedExample.png">
         <p>To add multiple child elements you must use the "+" sign to add more nested elements inside the first. So -> ".content>#id+#id2" creates:</p>
         <img src="./0media/images/emmetMultipleNestedExample.png">
@@ -69,56 +68,64 @@
         <p>We can use parentheses to generate however many elements we want. So -> "(.content)*5" creates:</p>
         <img src="./0media/images/emmetParenthesesGeneration.png">
         <p>When typing html emmet can be used to wrap the contents of the webpage so they fit onto the screen. This stops the need for halving the contents of any lines to fit onto the screen. This is done with "alt+z"</p>
-    </div>
-    <div>
-        <h2>Comments</h2></div>
+    </details>
+    <details>
+        <summary>Comments</summary>
+        <p>Comments are added to html code with the following: </p>
+        <!-- comments -->
+        <img src="./0media/images/commentsExample.png">
+    </details>
+    <details>
+        <summary>css- inline internal and external</summary>
         <p></p>
-    <div>
-        <h2>css- inline internal and external</h2></div>
+    </details>
+    <details>
+        <summary>Favicons</summary>
         <p></p>
-    <div>
-        <h2>Favicons</h2></div>
+    </details>
+    <details>
+        <summary>Block and inline</summary>
+        <p>Elements work differently. There are 2 types of elements that work differently from each other. Span and details elements are most notably different. Span is an inline element meaning it does not start on a new line and only takes up as much space that is neccessary for its content. Whereas a details element is a block element always starts on a new line and browsers always add some space (a margin) before and after the element. It always takes up the full width of the screen(It stretches out to the left and right as far as possible). </p>
+        <ul>Block Level Elements:</ul>
+        <img src="./0media/images/blockElements.png">
+        <ul>Inline Elements:</ul>
+        <img src="./0media/images/inlineElements.png" alt="">
+        <p>The folowing shows the difference between the 2 types of elements with showing its border.</p>      
+        <p style="border: 1px solid black">p</p>
+        <span style="border: 1px solid black">span</span>
+        <span style="border: 1px solid black">span</span>
+    </details>
+    <details>
+        <summary>Importance of class and id attributes</summary>
         <p></p>
-    <div>
-        <h2>Block and inline</h2></div>
+    </details>
+    <details>
+        <summary>File paths</summary>
         <p></p>
-    <div>
-        <h2>Importance of class and id attributes</h2></div>
+    </details>
+    <details>
+        <summary>Layout elements</summary>
         <p></p>
-    <div>
-        <h2>File paths</h2></div>
+    </details>
+    <details>
+        <summary>Responsive Web design</summary>
         <p></p>
-    <div>
-        <h2>Layout elements</h2></div>
+    </details>
+    <details>
+        <summary>Semantic elements</summary>
         <p></p>
-    <div>
-        <h2>Responsive Web design</h2></div>
+    </details>
+    <details>
+        <summary>Style guides</summary>
         <p></p>
-    <div>
-        <h2>Semantic elements</h2></div>
+    </details>
+    <details>
+        <summary>Character entities, symbols and emojis!</summary>
         <p></p>
-    <div>
-        <h2>Style guides</h2></div>
+    </details>
+    <details>
+        <summary>XHTML ??</summary>
         <p></p>
-    <div>
-        <h2>Character entities, symbols and emojis!</h2></div>
-        <p></p>
-    <div>
-        <h2>XHTML ??</h2></div>
-        <p></p>
-    <div>
-
-    </div>
-    <div>
-
-    </div>
-    <div>
-
-    </div>
-    <div>
-
-    </div>
-
-    
+    </details>
 </body>
 </html>
