@@ -4,7 +4,22 @@
     <meta charset="UTF-8">
     <meta name="author" content="Stephen Mogg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <style>
+        .randomClassStyle {
+            background-color: aqua;
+            color: blue;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px
+        }
+        #randomIdStyle{
+            background-color:chartreuse;
+            color:crimson;
+            border: 5px solid black;
+            margin: 40px;
+            padding: 40px
+        }
+    </style>
     <title>Lessons Learned</title>
 </head> 
 <body>
@@ -76,16 +91,25 @@
         <img src="./0media/images/commentsExample.png">
     </details>
     <details>
-        <summary>css- inline internal and external</summary>
-        <p></p>
+        <summary>css- inline,internal and external</summary>
+        <p>Using css to style a website there are multiple ways of adding css to elements.</p>
+        <p style="color: brown;">The first is inline. Inline styling is done inside of the element using the style attribute. This obviously only affects that singular element so is used when styling something alone. Here is an example:</p>
+        <img src="./0media/images/inlineExample.png" alt="">
+        <p>The second is internal. Internal sytling is done internally in a single webpage via a style element in the head element. This style element will hold styling for the whole page and specifies specific elements with associated styles. Here is an example:</p>
+        <img src="./0media/images/internalExample.png" alt="">
+        <p>The third is external. External styling uses styling that is not visible on the webpage. A simple link element will be used linking to a css file outside of the webpage and styling will take place that way. Here is an example of the link and css stlye sheet:</p>
+        <img src="./0media/images/externalLinkExample.png" alt="">
+        <img src="./0media/images/externalCssExample.png" alt="">
     </details>
     <details>
         <summary>Favicons</summary>
-        <p></p>
+        <p>Adding favicons into the website seems to be hard. Alot of the information out there says having the favicon in the root directory of your website seems to be the way, however from doing it this way it doesnt seem to work. Additionaly having it in an images folder in your root directory should be the way. Basically ive tried them all and some of them seem to work now and again. However what stays the same is the link element that you use to show the browser where to get the favicon from. The code should look like this: (with the correct location)</p>
+        <img src="./0media/images/faviconExample.png" alt="">
+        <p>Supposedly adding it in the root directory should make the website use the same favicon throughout all the webpages however this does not seem to be the case for me.</p>
     </details>
     <details>
         <summary>Block and inline</summary>
-        <p>Elements work differently. There are 2 types of elements that work differently from each other. Span and details elements are most notably different. Span is an inline element meaning it does not start on a new line and only takes up as much space that is neccessary for its content. Whereas a details element is a block element always starts on a new line and browsers always add some space (a margin) before and after the element. It always takes up the full width of the screen(It stretches out to the left and right as far as possible). </p>
+        <p>Elements work differently. There are 2 types of elements that work differently from each other. Span and details elements are most notably different. Span is an inline element meaning it does not start on a new line and only takes up as much space that is neccessary for its content. Whereas a details element is a block element always starts on a new line and browsers always add some space (a margin) before and after the element. It always takes up the full width of the screen(It stretches out to the left and right as far as possible).</p>
         <ul>Block Level Elements:</ul>
         <img src="./0media/images/blockElements.png">
         <ul>Inline Elements:</ul>
@@ -97,7 +121,38 @@
     </details>
     <details>
         <summary>Importance of class and id attributes</summary>
-        <p></p>
+
+        <p id="classBookmark"></p>
+        <h2>Class:</h2>
+        <p>The class attribute is used to specify a class for a HTML element. Multiple elements can share this class. Being able to refer to an elements class is often used to point to a style sheet. Importantly the elements with this class can be reffered to to be accessed and manipulated. Below shows the class of a paragraph element reffering internally to a style sheet.</p>
+        <p class="randomClassStyle"> random class style text.</p>
+        <p>This is the code:</p>
+        <img src="./0media/images/classStyleExample.png" alt="">
+        <img src="./0media/images/classParagraphExample.png" alt="">
+        <p>The class attribute can be used on any html element. It is case sensitive. The syntax for class has to be with a period "." then a name and curly braces with css in.</p>
+        <p>In javascript to get a class attribute the syntax is -> "document.getElementsByClassName("classname")"</p>
+
+        <br> 
+    
+        
+        <h2>Id:</h2>
+        <p>The id attribute is used to specify a unique id for an html element. You cannot have more than one element with the same id in an html document, unlike class attributes whihc can be used as much as you like. Id is unique and only used once.</p>
+        <p>The id attribute is most commonly used to point to a specific style declaration in a stylesheet. It is also used by javascript to manipulate that specific element.</p>
+        <p>The syntax for id is to write a hash character "#" followed by and id name. Then define the css properties within the curly braces.</p>
+        <p id="randomIdStyle"> random id style text</p>
+        <p>This is the code:</p>
+        <img src="./0media/images/idStyleExample.png" alt="">
+        <img src="./0media/images/idParagraphExample.png" alt="">
+        <p>The id name must contain one character, it cannot start with a number and must not contain whitespaces.</p>
+        <p>A use of id which class doesnt use is the ability to add html bookmarks and link to them. These bookmarks are placed throughout long documents and then a user can link to that bookmark in order to jump to that specific position in the document. Below is a link which should take you to the start of the class section:</p>
+        <a href="#classBookmark">jump to bookmark</a>
+        <p>This is coded like this:</p>
+        <img src="./0media/images/bookmarkExample.png" alt="">
+        <img src="./0media/images/bookmarkExample2.png" alt="">
+        <p>The id attributes is also used with javascript similarly to the class attribute where javascript can access elements with specific id's. This can then be handled and manipulated accordingly.</p>
+        <p>The javascript syntax to get an id attribute is -> "document.getElementById("idname")"</p>
+        
+
     </details>
     <details>
         <summary>File paths</summary>
