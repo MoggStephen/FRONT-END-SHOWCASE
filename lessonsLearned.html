@@ -19,7 +19,27 @@
             margin: 40px;
             padding: 40px
         }
+
+        .left, .right {
+            color: blue;
+            background-color: red;
+            float: left;
+            width: 20%; /* The width is 20%, by default */
+        }
+        .main {
+            color: blue;
+            background-color: brown;
+            float: left;
+            width: 60%; /* The width is 60%, by default */
+        }
+        /* Use a media query to add a breakpoint at 800px: */
+        @media screen and (max-width: 800px) {
+            .left, .main, .right {
+                width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+            }
+        }
     </style>
+
     <title>Lessons Learned</title>
 </head> 
 <body>
@@ -27,7 +47,7 @@
     <details> 
         <summary>Navigating through website structure using href attribute</summary>
 
-        <img src="0media/images/websiteStructure.png" style="height: 700px;">
+        <img src="0media/images/lessonsLearned/navigation/websiteStructure.png" style="height: 700px;">
         <p>As ive been coding my website ive been using the "./"" to navigate to my media folders to display images. This is a relative path. A relative path is one that starts from
             the current directory. For example the current directory of the audio.html file is "htmlElements\audioAndVideo". In order to get to the media folder 
             to display an image i would need to use the relative path "./media". This accesses the current relative directory to the "htmlElements\audioAndVideo" so that i can 
@@ -68,52 +88,52 @@
         <p>When creating a new html file you can simply type "!" and then press tab to add all of the require boilerplate code for the webpage.</p>
         <p>When creating pretty much any element you can type the element without its angled brackets and press tab to create the element and set it up with its required attributes.</p>
         <p>When creating elements with the emmet shortcuts. You can type the elements ammet abbreviation and then add a "." which adds a class attribute to the element. Any words typed after will be the value of the class attribute. For example -> "p.content" creates:</p>
-        <img src="./0media/images/emmetClassExample.png">
+        <img src="./0media/images/lessonsLearned/emmet/emmetClassExample.png">
         <p>This can be done for the id attribute as well with a "#". So typing the following -> "p#content2" creates the following:</p>
-        <img src="./0media/images/emmetIdExample.png">
+        <img src="./0media/images/lessonsLearned/emmet/emmetIdExample.png">
         <p>Typing these emmet abbreviations without an element beforehand emmet will defualt to creating a details element.</p>
         <p>to get more complex this can involve creating nested elements. Typing an element to be nested inside of an element uses ">". So creating a details inside of a details with the first details containing a class and the nested details containing an id would look like this: ".content>#id"</p>
-        <img src="./0media/images/emmetNestedExample.png">
+        <img src="./0media/images/lessonsLearned/emmet/emmetNestedExample.png">
         <p>To add multiple child elements you must use the "+" sign to add more nested elements inside the first. So -> ".content>#id+#id2" creates:</p>
-        <img src="./0media/images/emmetMultipleNestedExample.png">
+        <img src="./0media/images/lessonsLearned/emmet/emmetMultipleNestedExample.png">
         <p>Adding multiple of the same element can be done with the "*" symbol. So -> ".content>#id*3" creates: (This is mostly done with creating lots of list items)</p>
-        <img src="./0media/images/emmetMultipleSameNestedExample.png">
+        <img src="./0media/images/lessonsLearned/emmet/emmetMultipleSameNestedExample.png">
         <p>Lorem ipsum content can be created by typing "lorem" and then the nnumber of words you want. So -> "lorem20" creates:</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, repudiandae? Officiis distinctio sed quae quos itaque quis eveniet, mollitia neque.</p>
         <p>We can use parentheses to generate however many elements we want. So -> "(.content)*5" creates:</p>
-        <img src="./0media/images/emmetParenthesesGeneration.png">
+        <img src="./0media/images/lessonsLearned/emmet/emmetParenthesesGeneration.png">
         <p>When typing html emmet can be used to wrap the contents of the webpage so they fit onto the screen. This stops the need for halving the contents of any lines to fit onto the screen. This is done with "alt+z"</p>
     </details>
     <details>
         <summary>Comments</summary>
         <p>Comments are added to html code with the following: </p>
         <!-- comments -->
-        <img src="./0media/images/commentsExample.png">
+        <img src="./0media/images/lessonsLearned/comments/commentsExample.png">
     </details>
     <details>
         <summary>css- inline,internal and external</summary>
         <p>Using css to style a website there are multiple ways of adding css to elements.</p>
         <p style="color: brown;">The first is inline. Inline styling is done inside of the element using the style attribute. This obviously only affects that singular element so is used when styling something alone. Here is an example:</p>
-        <img src="./0media/images/inlineExample.png" alt="">
+        <img src="./0media/images/lessonsLearned/iie/inlineExample.png" alt="">
         <p>The second is internal. Internal sytling is done internally in a single webpage via a style element in the head element. This style element will hold styling for the whole page and specifies specific elements with associated styles. Here is an example:</p>
-        <img src="./0media/images/internalExample.png" alt="">
+        <img src="./0media/images/lessonsLearned/iie/internalExample.png" alt="">
         <p>The third is external. External styling uses styling that is not visible on the webpage. A simple link element will be used linking to a css file outside of the webpage and styling will take place that way. Here is an example of the link and css stlye sheet:</p>
-        <img src="./0media/images/externalLinkExample.png" alt="">
-        <img src="./0media/images/externalCssExample.png" alt="">
+        <img src="./0media/images/lessonsLearned/iie/externalLinkExample.png" alt="">
+        <img src="./0media/images/lessonsLearned/iie/externalCssExample.png" alt="">
     </details>
     <details>
         <summary>Favicons</summary>
         <p>Adding favicons into the website seems to be hard. Alot of the information out there says having the favicon in the root directory of your website seems to be the way, however from doing it this way it doesnt seem to work. Additionaly having it in an images folder in your root directory should be the way. Basically ive tried them all and some of them seem to work now and again. However what stays the same is the link element that you use to show the browser where to get the favicon from. The code should look like this: (with the correct location)</p>
-        <img src="./0media/images/faviconExample.png" alt="">
+        <img src="./0media/images/lessonsLearned/favicons/faviconExample.png" alt="">
         <p>Supposedly adding it in the root directory should make the website use the same favicon throughout all the webpages however this does not seem to be the case for me.</p>
     </details>
     <details>
         <summary>Block and inline</summary>
         <p>Elements work differently. There are 2 types of elements that work differently from each other. Span and details elements are most notably different. Span is an inline element meaning it does not start on a new line and only takes up as much space that is neccessary for its content. Whereas a details element is a block element always starts on a new line and browsers always add some space (a margin) before and after the element. It always takes up the full width of the screen(It stretches out to the left and right as far as possible).</p>
         <ul>Block Level Elements:</ul>
-        <img src="./0media/images/blockElements.png">
+        <img src="./0media/images/lessonsLearned/blockInline/blockElements.png">
         <ul>Inline Elements:</ul>
-        <img src="./0media/images/inlineElements.png" alt="">
+        <img src="./0media/images/lessonsLearned/blockInline/inlineElements.png" alt="">
         <p>The folowing shows the difference between the 2 types of elements with showing its border.</p>      
         <p style="border: 1px solid black">p</p>
         <span style="border: 1px solid black">span</span>
@@ -127,8 +147,8 @@
         <p>The class attribute is used to specify a class for a HTML element. Multiple elements can share this class. Being able to refer to an elements class is often used to point to a style sheet. Importantly the elements with this class can be reffered to to be accessed and manipulated. Below shows the class of a paragraph element reffering internally to a style sheet.</p>
         <p class="randomClassStyle"> random class style text.</p>
         <p>This is the code:</p>
-        <img src="./0media/images/classStyleExample.png" alt="">
-        <img src="./0media/images/classParagraphExample.png" alt="">
+        <img src="./0media/images/lessonsLearned/classID/classStyleExample.png" alt="">
+        <img src="./0media/images/lessonsLearned/classID/classParagraphExample.png" alt="">
         <p>The class attribute can be used on any html element. It is case sensitive. The syntax for class has to be with a period "." then a name and curly braces with css in.</p>
         <p>In javascript to get a class attribute the syntax is -> "document.getElementsByClassName("classname")"</p>
 
@@ -141,14 +161,14 @@
         <p>The syntax for id is to write a hash character "#" followed by and id name. Then define the css properties within the curly braces.</p>
         <p id="randomIdStyle"> random id style text</p>
         <p>This is the code:</p>
-        <img src="./0media/images/idStyleExample.png" alt="">
-        <img src="./0media/images/idParagraphExample.png" alt="">
+        <img src="./0media/images/lessonsLearned/classID/idStyleExample.png" alt="">
+        <img src="./0media/images/lessonsLearned/classID/idParagraphExample.png" alt="">
         <p>The id name must contain one character, it cannot start with a number and must not contain whitespaces.</p>
         <p>A use of id which class doesnt use is the ability to add html bookmarks and link to them. These bookmarks are placed throughout long documents and then a user can link to that bookmark in order to jump to that specific position in the document. Below is a link which should take you to the start of the class section:</p>
         <a href="#classBookmark">jump to bookmark</a>
         <p>This is coded like this:</p>
-        <img src="./0media/images/bookmarkExample.png" alt="">
-        <img src="./0media/images/bookmarkExample2.png" alt="">
+        <img src="./0media/images/lessonsLearned/classID/bookmarkExample.png" alt="">
+        <img src="./0media/images/lessonsLearned/classID/bookmarkExample2.png" alt="">
         <p>The id attributes is also used with javascript similarly to the class attribute where javascript can access elements with specific id's. This can then be handled and manipulated accordingly.</p>
         <p>The javascript syntax to get an id attribute is -> "document.getElementById("idname")"</p>
     </details>
@@ -163,7 +183,7 @@
         <ul>footer - Defines a footer for a document or a section</ul>
         <ul>details - Defines additional details that the user can open and close on demand</ul>
         <ul>summary - Defines a heading for the details element</ul>
-        <img src="./0media/images/layoutExample.png" alt="">
+        <img src="./0media/images/lessonsLearned/layout/layoutExample.png" alt="">
         <p>This layout is mostly for web1.0 when websites where strictly just about displaying content for the user. This has changed over the years as we developed into web2.0. Despite their being much easier methods of creating this layout in modern days i want to explore just a little about how it was traditionally. Easier methods today would typically incorporate some css framework to organise this layout like bootstrap however im going to cover some techniques that was used:</p>
 
         <h2>css float</h2>
@@ -182,7 +202,41 @@
     </details>
     <details>
         <summary>Responsive Web design</summary>
-        <p></p>
+        <p>Responsive web design is an extremely important aspect of creating websites and webpages. Phones, tvs, computers, laptops and tablets all have varying screen sizes. This causes the elements of a webpage to show differently. It is very important for a website to be able to effectively show its content whilst making it look good taking into account varying screen sizes. Successful web design will automatically adjust for different screen sizes and viewports.</p>
+        <p>HTML and CSS are used to automatically resize, shrink, hide or enlarge a website to make it look good on all devices.</p>
+        <p>Setting the viewport of all your webpages should be done. This is actually added automatically with the "!" emmet shortcut to quickly set up a webpage. Thsi works by giving the browser instructions on how to control the pages dimensions and scaling. Here is an example of the code and what it does:</p>
+        <img src="./0media/images/lessonsLearned/responsiveWD/viewportExample.png" alt="">
+        <img src="./0media/images/lessonsLearned/responsiveWD/withoutViewport.png" alt="">
+        <img src="./0media/images/lessonsLearned/responsiveWD/withViewport.png" alt="">
+        <p>You can also create responsive images that scale to the size of any device. This is done utilizing the width property set to 100%, the image will be responsive and scale appropriately to the screen size. Change the size of your browser and see this take affect with the following image:</p>
+        <img src="./0media/images/lessonsLearned/responsiveWD/scalableImage.png" style="width:100%;" alt="">
+        <p>This is not the best solution as the image takes up the full width of the webpage. A better solution is using max-width to 100% and height to auto which uses the images original size and only downscales when it has to. This is shown in the following with the same image:</p>
+        <img src="./0media/images/lessonsLearned/responsiveWD/scalableImage.png" style="max-width:100%;height:auto;"alt="">
+        <p>You can show different images depending on the browser width with the picture element. This is done in order to take into account different screen sizes. Resizing the browser should change the picture below:</p>
+        <picture>
+            <source srcset="./0media\images\lessonsLearned\responsiveWD\smallCactus.jpg" media="(max-width: 500px)">
+            <source srcset="0media\images\lessonsLearned\responsiveWD\mediumCactus.jpg" media="(max-width: 1000px)">
+            <source srcset="0media\images\lessonsLearned\responsiveWD\bigCactus.jpg" media="(max-width: 2000px)">
+            <img src="./0media\images\lessonsLearned\responsiveWD\smallCactus.jpg" alt="" media="(max-width: 500px)">
+        </picture>
+        <p>This is kind of finnicky to get working correctly but from what ive gathered the max widths that you set should no more than the width of the actual image. In doing so allows the picture element to appropriately display the image. If not done correctly it will sometimes show the image you supplied in the image element. Youve got to play around with it quite abit in order to get it working and it seems to be the case where you add a max width much larger than the images. This is probably done much more accurately with javascript lol. This is the code that i got working:</p>
+        <img src="./0media/images/lessonsLearned/responsiveWD/changePictureCode.png" alt="">
+        <p>Responsive text size can also be done much more easily than with images. This is set with a vw unit which means the viewport width. This way the text size can follow the size of the browser window. The code is -> style="font-size:10vw" This is used below:</p>
+        <h3 style="font-size:3vw">Responsive text</h3>
+        <p>Media queries are commonly used in responsive webpages. These are used to define different styles for different browser sizes. Resizing the browser for the following div elements (that are aligned to fit aligned next to each other.) will eventually set each div to take up 100% width. </p>
+        <div class="left">
+            <p>Left Menu</p>
+        </div>
+        <div class="main">
+            <p>Main Content</p>
+        </div>
+        <div class="right">
+            <p>Right Content</p>
+        </div>
+        <p>Below we have the code to produce this:</p>
+        <img src="./0media/images/lessonsLearned/responsiveWD/mediaQueryCss.png" alt="">
+        <img src="./0media/images/lessonsLearned/responsiveWD/mediaQueryDiv.png" alt="">
+
     </details>
     <details>
         <summary>Semantic elements</summary>
