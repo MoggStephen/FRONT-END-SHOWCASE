@@ -151,16 +151,34 @@
         <img src="./0media/images/bookmarkExample2.png" alt="">
         <p>The id attributes is also used with javascript similarly to the class attribute where javascript can access elements with specific id's. This can then be handled and manipulated accordingly.</p>
         <p>The javascript syntax to get an id attribute is -> "document.getElementById("idname")"</p>
-        
-
-    </details>
-    <details>
-        <summary>File paths</summary>
-        <p></p>
     </details>
     <details>
         <summary>Layout elements</summary>
-        <p></p>
+        <p>Websites typically display content that is all grouped together in a certain way. Importantly the website has semantic elements that define different parts of the webpage.</p>
+        <ul>header - defines a hjeader for a document or section</ul>
+        <ul>nav - Defines a set of navigation links</ul>
+        <ul>section - Defines a section in a document</ul>
+        <ul>article - Defines an independant, self-contained content</ul>
+        <ul>aside - Defines content aside from the content(like a sidebar)</ul>
+        <ul>footer - Defines a footer for a document or a section</ul>
+        <ul>details - Defines additional details that the user can open and close on demand</ul>
+        <ul>summary - Defines a heading for the details element</ul>
+        <img src="./0media/images/layoutExample.png" alt="">
+        <p>This layout is mostly for web1.0 when websites where strictly just about displaying content for the user. This has changed over the years as we developed into web2.0. Despite their being much easier methods of creating this layout in modern days i want to explore just a little about how it was traditionally. Easier methods today would typically incorporate some css framework to organise this layout like bootstrap however im going to cover some techniques that was used:</p>
+
+        <h2>css float</h2>
+        <p> It was very common to do entire web layouts using the css float property. This is easy to learn, and you just need to remember how the float and clear properties work. Disadvantages for this technique are that floating elements are tied to document flow, which harms the flexibility. Below shows the difference in the two pages.</p>
+        <a href="./0media/floatPage/float.html">Page styled with float!</a>
+        <p>Most notably the footer and header has been increased in size and the article and nav parts inside of the section element have been aligned next to each other. The nav and article element have been aligned next to each other using the float element. This seems to work where they both have float left assigned to them and the first element on the page gets to be on the left.</p>
+
+        <h2>css flexbox</h2>
+        <p>Flexbox is a very commonly used technique and it ensures that elements behave predictably when the page layout must accomodate different screen sizes and different display devices. The following shows the difference between the pages:</p>
+        <a href="./0media/flexboxPage/flexbox.html">Page styled with flexbox!</a>
+        <p>This seems to work where the section element sets up a container for the flexboxes and then the elements inside of the section element ie the nav and article are set up as flex boxes that appear to have some identification on the order they are presented.</p>
+
+        <h2>css grid</h2>
+        <p>This seems to work similarly to the table html element.</p>
+        
     </details>
     <details>
         <summary>Responsive Web design</summary>
