@@ -11,6 +11,9 @@
             min-height: 100%;
             width: 100%;
             min-width: 100%;
+            margin:0;
+            padding:0;
+            
         }
         body {
             height: 100%;
@@ -18,17 +21,18 @@
             width: 100%;
             min-width: 100%; 
             margin:0;
+            padding:0;
         }
         header {
             /* Set minimum height and width to fix scaling size issues */
             height: 10%;
-            min-height: 60px;
+
             width: 100%;
             min-width: 100px;
             margin: 0;
             background: lightskyblue;
             color: white;
-            font-size: 30px;  
+            font-size: 5vmin;  
             /* Flex to easily center text vertically and horizontally */
             display: flex;
             align-items: center;
@@ -37,23 +41,32 @@
         nav {  
             /* Set minimum height and width to fix scaling size issues */
             height: 5%;   
-            min-height: 40px;  
             width: 100%;
             min-width: 100px;          
             overflow: hidden;/*Needs to be redone with media query to change the way each link is displayed*/
             background-color: grey;
             position: -webkit-sticky;
-            margin: 0;          
+            margin: 0;    
+            display: flex;      
         }
         a {
             float: left;
+            height: calc(100% - 4px);/*calc to remove margin overflowing into other elements.*/
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 2px;
+            margin-bottom: 2px;
             color: white;
             text-align: center;
-            text-decoration: none;
-            padding: 14px 20px;
+            text-decoration: none; 
+            font-size: 2vmin;          
+            /* Flex to easily center text vertically and horizontally */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .right { /* Right-aligned link */
-            float: right;
+            margin-left: auto;
         }       
         a:hover { /* Hover on link */
             background-color:  #ddd;
@@ -64,6 +77,7 @@
             background-color: antiquewhite;
             height: 100%;
             width: 100%;
+            font-size: 2vmin;
             /* Flex to easily center text vertically and horizontally */
             display: flex;
             align-items: center;
@@ -73,6 +87,7 @@
             background-color: antiquewhite;
             height: 100%;
             width: 100%;
+            font-size: 2vmin;
             /* Flex to easily center text vertically and horizontally */
             display: flex;
             align-items: center;
@@ -82,6 +97,7 @@
             background-color: antiquewhite;
             height: 100%;
             width: 100%;
+            font-size: 2vmin;
             /* Flex to easily center text vertically and horizontally */
             display: flex;
             align-items: center;
@@ -90,12 +106,13 @@
         footer {
             /* Set minimum height and width to fix scaling size issues */
             height: 10%;
-            min-height: 60px;
+
             width: 100%;   
-            min-width: 100px;         
+            min-width: 100px;
+            margin: 0;         
             background: lightskyblue;
             color: white;
-            font-size: 30px;
+            font-size: 5vmin;
             /* Flex to easily center text vertically and horizontally */
             display: flex;
             align-items: center;
@@ -104,7 +121,7 @@
         .grid-container {
             height: 75%;
             width:100%;
-            min-width: 100px;
+            min-width: 100px;/*For some reason without this the container has whitespace on the right at smaller res*/
             display: grid;
             grid-gap: 10px;
             grid-template-columns: auto auto auto;
@@ -130,29 +147,49 @@
             grid-column-start: 3;
             grid-column-end:4;
         }
+        /*  Adding additional space for navbar links at lower screen sizes.
+                Currently disabled due to vmin making nav elements small enough to fit onto 
+                one screen at all sizes however this can be enabled should the need arise for more space for links.
+        @media screen and (max-height: 500px) {
+            @media screen and (max-width: 580px) {
+                nav {
+                    height: 10%;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                a {               
+                    height: 50%;
+                }
+                .grid-container{
+                    height: 70%;
+                }
+            }        
+        }
+        #########Nested media queries may not be supported by all browsers.#########
+        */
     </style>
 <body>
-    <header>Page Header</header>
+    <header>Header</header>
     <nav>
-        <a href="#">Navbar link 1</a>
-        <a href="#">Navbar link 2</a>
-        <a href="#">Navbar link 3</a>
-        <a href="#" class="right">Navbar link 4(right)</a>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#" class="right">Link 4(right)</a>
     </nav>
 
     <div class="grid-container">
         <div class="box item1">
-            <section>Page Section</section>
+            <section>Section</section>
         </div>
         <div class="box item2">
-            <article>Page Article</article>
+            <article>Article</article>
         </div>
         <div class="box item3">
-            <aside>Page Aside</aside>
+            <aside>Aside</aside>
         </div>
     </div>
 
 
-    <footer>Page footer</footer>
+    <footer>Footer</footer>
 </body>
 </html>

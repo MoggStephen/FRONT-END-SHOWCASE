@@ -240,7 +240,29 @@
     </details>
     <details>
         <summary>Semantic elements</summary>
-        <p></p>
+        <p>Semantic elements are elements that have meaning to the browser and the developer. Non-semantic elements tell nothing about its content.</p>
+        <p>Form, table and article are semantic elements as they clearly describe what their use is on the webpage. Unlike div and span which dont describe its desired content.</p>
+        <p>These semantic elements i think are mostly old html elements from when webpages were first built. Back when websites were still new most of their content would be readable and not interactive therefore they would typically hold semantic information and therefore these elements would be used all the time. Nowadays websites do so many different things and their content doesnt strictly classify into semantic content, hence why most websites nowadays are built wnot strictly following the semantic content design. A typical website holding semantic information is commonly dispplayed like the following:</p>
+        <img src="./0media/images/lessonsLearned/semantics/semanticFlow.png" alt="">
+        <p>I have tried to create this webpage layout as simply as possible. This proved difficult as i have minimal experience setting the layout for a webpage as such. I initially tried using floats and got no where, then moved to using flexbox which i gathered wasnt the right method to create that specific layout. I eventually used css grid and it took me a while to get used to however i finally created the desired layout. Importantly i wanted this webpage to be as simple as possible and responsive so that it scales nice. Below you'll find a log of creating this webpage and a link to the webpage</p>
+        <details>
+            <summary>Log of creating this webpage</summary>
+            <p>I got carried away with this responsive design quite abit and found that using percentage heights on all the elements allowed the whole page to scale down nicely.</p>
+            <p>There were some elements that had issues as it got really small and simply setting the min-width and min-height stopped the element from scaling anymore. This actually caused issues were content would take up more than the percentage required at small screen sizes so i scrapped this. I started using vmax font sizes to allow content to fit into the smaller sized elements. I found the cut of where content would be hidden was at a width of 162 pixels. Only nav elements would cut off. This is fixed later with media queries.</p>
+            <p>I got really carried away with ensuring the website only used 100% of the screen width and height at all times. In doing so means that no scroll bar ever becomes present because no content ever overflows or goes outside of the 100%. This commonly happens due to margin and padding however using calc() allowed me to take away the margins that were present against 100% which stopped elements overflowing and worked so that no scroll bar ever becomes present in the webpage.</p>
+            <p>I used flexboxes inside most of the semantic elements to easily vertically and horizontally center text. Flexboxes are good at scaling down as well.</p>
+            <p>I used responsive text scaling on all the elements so that text isnt too big on small screens. Using vmax seemed to be the best method.</p>
+            <p>I also used media queries on the navbar as scaling this down causes nav elements to naturally dissapear. These media queries make the nav elements smaller and take up the full width of the screen. In order to implement this so nav links dont go missing on the website i need to change alot of the percentage heights in order to fit all the content all truly on 100% of the screen. In order to do this properly i would want it to scale dynamically to the amount of nav links with their different sizes.I think an acceptable thing to do here is to simply add another line that nav links can go on and accept any overflow of links after that. These are very extreme methods for such smaller screen sizes that wont occur for real life applications but for some reason i want to give it a go.</p>
+            <p>The navbar element start to lose links at around 200px wide with a height of 650px. Im going to start the navbar transformation at 300px wide and 900px high as i have really small links. After completing this ive found that at certain screen sizes the second line added into the navbar isnt needed because the height causes the elements to be tiny anyways and we end up with an unneccesary line. Ive also found that at desktop screen sizes the text is really big and some overflow causes a scroll bar to appear. This was caused by vmax, i started using vmin instead.</p>
+            <p>To fix the navbar issue i need to be able to set width and resolution in the media query. Currently all common phone screen sizes are not making use of this excess space created. As ive just changed elements to use vmin the links are small enough to fit onto one line. I have commented out a nested media query that can be used should the need ever arise to supply more space for links!</p>
+            <p>The only thing that causes content to not fill up the whole screen is when we get to 100px width and content starts to squash up to the top of the page, however ive definitely achieved a more than acceptable responsive design.</p>
+        </details>
+        <a href="./semanticFlow.html">Completely responsive semantic no overflow webpage</a>
+        <p>Semantic elements are:</p>
+        <img src="./0media/images/lessonsLearned/semantics/semanticElements.png" alt="">
+        
+        
+
     </details>
     <details>
         <summary>Style guides</summary>
