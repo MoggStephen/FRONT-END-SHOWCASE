@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Flow</title>
+    <style>
+        body {
+            /* overflow: hidden;   */
+            height: 100%;
+            min-height: 100%;
+        }
+        html {
+            height: 100%;
+            min-height: 100%;
+            width: 100%;
+            min-width: 100%;
+            overflow: initial;
+        }
+        header {
+            height: 10%;
+            min-height: 60px;
+            text-align: center;
+            background: lightskyblue;
+            color: white;
+            font-size: 30px;
+            margin: 0;
+        }         
+        nav {    
+            min-height: 40px;  
+            height: 5%;    
+            overflow: hidden;
+            background-color: grey;
+            position: -webkit-sticky;
+            margin: 0;          
+        }
+        a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .right { /* Right-aligned link */
+            float: right;
+        }       
+        a:hover { /* Hover on link */
+            background-color:  #ddd;
+            color: black;
+        }
+        section {
+            margin-right: 10px;
+            height: 50%;
+
+            background-color: antiquewhite;
+            flex-direction: column;
+            flex-grow:1;        
+            text-align:center;
+            align-items: center;
+            justify-content: center;
+        }
+        article {
+            margin-top: 10px;
+            margin-right: 10px;
+            height: 50%;
+
+            background-color: antiquewhite;
+            flex-direction: column;
+            flex-grow:1;        
+            text-align:center;
+            align-items: center;
+            justify-content: center;
+        }
+        aside {
+            padding-bottom: 10px;
+            height: 100%;
+
+            background-color: antiquewhite;
+            flex-direction: column;
+            flex-grow:1;        
+            text-align:center;
+            align-items: center;
+            justify-content: center;    
+        }
+        footer {
+            height: 10%;
+            min-height: 60px;
+            text-align: center;
+            background: lightskyblue;
+            color: white;
+            font-size: 30px;
+            margin-top: 10px;
+            width: 100%;   
+        } 
+        .leftcolumn{
+            float: left;
+            width: 70%;
+        }
+        .rightcolumn{
+            float: right;
+            width: 30%;
+        }
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        div{
+            height: 70%;
+            margin-right: 0;
+        }
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+            .leftcolumn {  
+                height: 73.33%; 
+                width: 100%;
+                padding: 0;
+            }
+            .rightcolumn { 
+                height: 33.33%;  
+                width: 100%;
+                padding: 0;
+            }
+            aside{
+                height:33.33%;
+                padding-bottom: 0;
+                margin-top: -143px;
+            }
+            article{
+                height:33.33%;
+                margin-top: 10px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            section{
+                height:33.33%;
+                margin-right: 0;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+            nav a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+<body>
+    <header>Page Header</header>
+    <nav>
+        <a href="#">Navbar link 1</a>
+        <a href="#">Navbar link 2</a>
+        <a href="#">Navbar link 3</a>
+        <a href="#" class="right">Navbar link 4(right)</a>
+    </nav>
+    <div class="row">
+        <div class="leftcolumn" style="height:100%">
+            <section>Page Section</section>  
+            <article>Page Article</article>
+        </div>
+        <div class="rightcolumn" style="height:100%">
+            <aside>Page Aside</aside>
+        </div>  
+    </div>  
+    <footer>Page footer</footer>
+</body>
+</html>
