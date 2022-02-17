@@ -1,42 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-gb">
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Stephen Mogg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .randomClassStyle {
-            background-color: aqua;
-            color: blue;
-            border: 2px solid black;
-            margin: 20px;
-            padding: 20px
-        }
-        #randomIdStyle{
-            background-color:chartreuse;
-            color:crimson;
-            border: 5px solid black;
-            margin: 40px;
-            padding: 40px
-        }
-
-        .left, .right {
-            color: blue;
-            background-color: red;
-            float: left;
-            width: 20%; /* The width is 20%, by default */
-        }
-        .main {
-            color: blue;
-            background-color: brown;
-            float: left;
-            width: 60%; /* The width is 60%, by default */
-        }
-        /* Use a media query to add a breakpoint at 800px: */
-        @media screen and (max-width: 800px) {
-            .left, .main, .right {
-                width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-            }
+        details[open] {
+            background-color: antiquewhite;
         }
     </style>
 
@@ -259,22 +229,74 @@
         </details>
         <a href="./semanticFlow.html">Completely responsive semantic no overflow webpage</a>
         <p>Semantic elements are:</p>
-        <img src="./0media/images/lessonsLearned/semantics/semanticElements.png" alt="">
-        
-        
-
+        <img src="./0media/images/lessonsLearned/semantics/semanticElements.png" alt="">           
     </details>
     <details>
         <summary>Style guides</summary>
-        <p></p>
+        <p>Coding practices and standards are neccessary when creating any program. This is the same within html.</p>
+        <p>Aspects of coding html that must be maintained are:</p>
+        <li>The document delcaration should always be -> <img src="./0media/images/lessonsLearned/styleGuides/doctype.png" alt="Doctype code"></li>
+        <li>Always use lowercase element names -> "body". Not "body"</li>
+        <li>Its actually not neccessary to close all elements, however it is always good practice to close them.</li>
+        <li>Always use lowercase attribute names -> "href". Not "HREF"</li>
+        <li>Html attributes actually dont need to be quoted however it is best practice to do so. -> "class="container"". Not "class=container"</li>
+        <li>Images must always specify alt, width and height. -> <img src="./0media/images/lessonsLearned/styleGuides/images.png" alt="imageExample" style="width: 450px; height: 21px;"></li>
+        <li>Html allows spaces around equal signs however it always best to make them spaceless. -> "href="/index"". Not "href = "/index"" </li>
+        <li>Avoid long code lines. long code lines make the code unreadable:</li>
+        <img src="./0media/images/lessonsLearned/styleGuides/longCodeLines.png" alt="">
+        <li>Never skip the title element. This is required for search engines. This supplies content for the browser toolbar, the page when it is added to favourites and a title for search engines.</li>
+        <li>It is always best practice to always add the html and body elements as these can actually not ommited with most browsers.</li>
+        <li>In html empty html elements can actually be closed. It is usually best to close these elements with a "/" at the end.</li>
+        <li>The lang attribute should always be added to a html tag. This automatically done using emmet shortcuts but make sure to add a country code after the language code. <img src="./0media/images/lessonsLearned/styleGuides/langAttribute.png" alt=""></li>
+        <li>Proper interpretation of and correct search engine indexing will require both the language and chartset encoding. These should be defined as early as possible in the document. This is done with the emmet shortcut.</li>
+        <li>Setting the viewport is an important aspect for responsive design. It is good practice to add this to all webpages so they scale with the devices screen. <img src="./0media/images/lessonsLearned/styleGuides/viewport.png" alt=""></li>
+        <li>Html comments are written with "&lt;!-- --	&gt;" Long comments should indented with 2 spaces. Example:</li>
+        <img src="./0media/images/lessonsLearned/styleGuides/longComments.png" alt="">
+        <li>Simple syntax should be used for linking stylesheets.(This is where the type is not neccessary). <img src="./0media/images/lessonsLearned/styleGuides/cssSyntax.png" alt=""></li>
+        <li>When adding css make sure that quotes are only around values that contain spaces. Short and Long css should set up like the following:</li>
+        <img src="./0media/images/lessonsLearned/styleGuides/shortCss.png" alt=""><img src="./0media/images/lessonsLearned/styleGuides/longCss.png" alt="">
+        <li>Simple syntax should be used when loading external scripts. The type attribute is not neccessary. -> "&lt;script src="myscript.js"&gt;"</li>
+        <li>Accessing html elements in javascript can result in errors if the html is done wrong.</li>
+        <li>Use lowercase file names throughout the website. Some web servers are case sensitive about file names. This can cause problems with file names being spelt with upper cases. Make sure to always follow then first character should be lowercase and then any additional word after that starts with a capital for readability. Even small errors will break the website if you move from a case sensitive to insensitive server.</li>
+        <li>File extensionsshould always have the ".html" (weirdly .htm is allowed). Css files should always have the ".css" extension and javascript should always have the ".js" extension.</li>
+        <li>There is no difference between the ".htm" and the ".html" file extensions and they will noth be treated the same.</li>
+        <li>When a url does not specify a filename at the end the server adds a default filename such as "index.html", "index.html", "default.html", "default.htm". Servers can be configured differently and if your server is configured with "index.html" as the default filename your file must be named "idex.html" and not "default.htm". SErvers can be configured with more than one default filenames.</li>
     </details>
     <details>
         <summary>Character entities, symbols and emojis!</summary>
-        <p></p>
+        <p>The whole utf-8 character set has codes for all the characters you would want to display on a webpage. These characters can be used to display emojis, greek letters and just plain old alphabet characters.There are up to 10175 characters available in this character set that you can disp[lay with its unique entity or number code.</p>
+        
+        <h3>Entities</h3>
+        <p>Html has reserved characters that can cause trouble if you want them to be in text. For example the crocadile brackets are commonly used for elements therefore cant be written plainly in text. This is where character entities come in. You can use either the entities number or its name to do this. These entities have specific codes that generate certain characters that a html page would use in its code. Character tags are used to display reserved characters in HTML. To write more than and less than signs "&lt;" and "&gt;" you write their codes in the text like ive done here:</p>
+        <img src="./0media/images/lessonsLearned/enititiesSymbolsCharset/moreThanAndLessThanSigns.png" alt="">
+        <p>Non breaking spaces are commonly used to prevent the browser from truncating spaces in the page. Example:</p>
+        <p>          10 Normal spaces before</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 non breaking spaces before</p>
+        <p>Here we have some popular entity codes: 	&yen; 	&reg;</p>
+        <img src="./0media/images/lessonsLearned/enititiesSymbolsCharset/entityCodes.png" alt="">
+        <p>Diacritical notes are also added to text using entity codes: O&#768; a&#770;</p>
+        <img src="./0media/images/lessonsLearned/enititiesSymbolsCharset/diacriticalMarks.png" alt="">
+
+        <h3>Symbols</h3>
+        <li>Mathematical Symbols: &nabla; &#8719; 	&#8721;</li>
+        <img src="./0media/images/lessonsLearned/enititiesSymbolsCharset/symbols.png" alt="">
+        <li>Greek Letters: 	&#915; 	&#916;</li>
+        <img src="./0media/images/lessonsLearned/enititiesSymbolsCharset/greekLetters.png" alt="">
+        <li>Other Entities: &#8594; &hearts; &trade;</li>
+        <img src="./0media/images/lessonsLearned/enititiesSymbolsCharset/otherEntities.png" alt="">
+
+        <h3>Emojis</h3>
+        <p>The character set utf-8 hosts all of these entitiy codes. Emojis are also included. &#128512; &#128509; &#128511;</p>
+        <img src="./0media/images/lessonsLearned/enititiesSymbolsCharset/emojis.png" alt="">
     </details>
     <details>
         <summary>XHTML ??</summary>
-        <p></p>
+        <p>XHTML is a stricter more xml based version of html.</p>
+        <li>XHTML stands for Extensible HyperText Markup Language</li>
+        <li>XHTML is stricter</li>
+        <li>XHTML ishtml defined as a XML application</li>
+        <li>XHTML is supported by all major browsers</li>
+        <img src="./0media/images/lessonsLearned/xhtml/xhtmlVShtml.png" alt="">
     </details>
 </body>
 </html>
