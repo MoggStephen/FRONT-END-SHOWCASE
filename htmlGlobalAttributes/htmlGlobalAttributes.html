@@ -9,7 +9,26 @@
         details[open] {
             background-color: antiquewhite;
         }
+        .paragraph{
+            color: cornflowerblue;
+        }
     </style>
+    <script language="javascript">  
+        function ChangeColor()  
+        {  
+            var button = document.getElementById('btn');
+            var colour = getComputedStyle(button);
+            //rgb(173, 216, 230) === lightblue
+            if (colour['background-color'] === "rgb(173, 216, 230)") 
+            {
+                document.getElementById('btn').style.backgroundColor='lightgreen';
+            } 
+            else 
+            {
+                document.getElementById('btn').style.backgroundColor='lightblue'; 
+            }        
+        }  
+   </script>  
     
     <title>Html Attributes</title>
 </head>
@@ -22,47 +41,46 @@
     <details>
         <summary><b>accesskey</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>An accesskey provides a webpage to supply shortcuts to activate/ focus to a specific element. The value provided to this attribute provides the shortcut for that specific element. This shortcut is used by pressing alt+key or alt+shift+key. This is done differently in different browsers and operating systems. Below is a graph showing the specific shortcut for these different combination of operating system and browser:</p>
+        <img src="./0media/images/accesskeyShortcuts.png" alt="">
+        <p>Despite the use of this attribute it is mostly not advised not to use accesskey due to its complications with a user accidentally pressing the shortcut to an element and the fact that there are some major language issues where a user with a keyboard of another language may not have the correct character on their keyboard to press for the shortcut. This attribute also has poor browser support. These accesskeys need to be somehow shown to the customer that they exist which can be kind of anoying to show on a webpage.</p>
+        <p>The accesskey value must be one singular character.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <p>Below we have a hyperlink to a w3schools webpage. Its accesskey is the character "c". Pressing alt+c will take you to the hyperlink and activate the hyperlink to travel to the webpage. We also have a button that changes colour using some simple javascript when pressed and its access key is "b"</p>
+        <a href="https://www.w3schools.com/css/" accesskey="c">CSS</a><br>
+        <button onclick="ChangeColor()" id="btn" style="background-color: lightblue;" accesskey="b">Change colour</button>
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/accesskeyExample.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt;element accesskey="character"&gt;</p>
 
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p>character:</p>
+        <p>A single character that specifies the shorcut key to activate /focus the element.</p>
 
     </details>
     <details>
         <summary><b>class</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>The class attribute allows you to specify one ore more class name for one specific element. This is most commonly used to point to a class in a style sheet. A class is also used in javascript (using the HTML DOM)to identify specific elements with a specific classto be able to make changes to them.</p>
+        <p>Classes that are used in stylesheets start with a "." and then the classname. The element that will take up that class does need to use the ".".</p>
+        <p>Class names are case sensitive. It is also advised that class names be semantic.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <p class="paragraph">paragraph</p>
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/classExampleElement.png" alt="">
+        <img src="./0media/images/classExampleStyle.png" alt="">
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt;element class="classname"&gt;</p>
+        
 
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p>classname:</p>
+        <p>specifies a classname for an element. To specify multiple classes, seperate the class name with a space. e.g. &lt;span class="left important"&gt;. This allows you to combine several css classes for one html element. There are naming rules of classes. Names must begin with a letter A-Z or a-z. They can be followed by: letters (A-Za-z, digits(0-9), hyphens("-") and underscores ("_").)</p>
 
     </details>
     <details>
@@ -80,12 +98,12 @@
         <br>
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt; &gt;</p>
 
         <br>
 
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p></p>
 
     </details>
     <details>
@@ -103,12 +121,12 @@
         <br>
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt; &gt;</p>
 
         <br>
 
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p></p>
 
     </details>
     <details>
@@ -126,12 +144,12 @@
         <br>
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt; &gt;</p>
 
         <br>
 
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p></p>
 
     </details>
     <details>
@@ -149,12 +167,12 @@
         <br>
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt; &gt;</p>
 
         <br>
 
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p></p>
 
     </details>
     <details>
@@ -172,12 +190,12 @@
         <br>
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt; &gt;</p>
 
         <br>
 
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p></p>
 
     </details>
     <details>
@@ -195,12 +213,12 @@
         <br>
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt; &gt;</p>
 
         <br>
 
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p></p>
 
     </details>
     <details>
@@ -218,12 +236,12 @@
         <br>
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt; &gt;</p>
 
         <br>
 
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p></p>
 
     </details>
     <details>
@@ -241,12 +259,12 @@
         <br>
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt; &gt;</p>
 
         <br>
 
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p></p>
 
     </details>
     <details>
@@ -264,12 +282,12 @@
         <br>
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt; &gt;</p>
 
         <br>
 
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p></p>
 
     </details>
     <details>
@@ -287,12 +305,12 @@
         <br>
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt; &gt;</p>
 
         <br>
 
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p></p>
 
     </details>
     <details>
@@ -310,12 +328,12 @@
         <br>
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt; &gt;</p>
 
         <br>
 
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p></p>
 
     </details>
     <details>
@@ -333,15 +351,13 @@
         <br>
 
         <h3>Syntax:</h3>
-        <p>None</p>
+        <p>&lt; &gt;</p>
 
         <br>
 
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <h3>Attribute values: </h3>
+        <p></p>
 
     </details>
-
-
 </body>
 </html>

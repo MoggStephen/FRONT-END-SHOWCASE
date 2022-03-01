@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="author" content="Stephen Mogg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="llStyles.css">
     <style>
         details[open] {
             background-color: antiquewhite;
+        }
+        button{
+            background-color: darkslateblue;
         }
     </style>
 
@@ -90,6 +94,8 @@
         <p>The third is external. External styling uses styling that is not visible on the webpage. A simple link element will be used linking to a css file outside of the webpage and styling will take place that way. Here is an example of the link and css stlye sheet:</p>
         <img src="./0media/images/lessonsLearned/iie/externalLinkExample.png" alt="">
         <img src="./0media/images/lessonsLearned/iie/externalCssExample.png" alt="">
+        <p>Below shows a button with all methods of styling applying different colours to it. The browser prioritises inline first then internal and then external styling last. The inline styling is the one applied.</p>
+        <button style="background-color: burlywood;">Button</button>
     </details>
     <details>
         <summary>Favicons</summary>
