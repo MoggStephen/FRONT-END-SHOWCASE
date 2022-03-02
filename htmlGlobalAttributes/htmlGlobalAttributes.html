@@ -139,24 +139,24 @@
     <details>
         <summary><b>dir</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>The dir global attribute specifies the text direction of an elements contents.</p>
+        <p>This attribute is mandatory on the bdo element, where it has a different meaning. This attribute can be overridden by the css properties "direciton" and "unicode-bidi" if a css page is active and supports these properties. As the directionality of text is semantically realted to its content and not to its presenation, it is recommended that web developers use this attribute instead of the css properties mention previously. This is because the text will display correctly even on a browser that doesnt support css or has the css deactivated.</p>
+        <p>The auto value should be used on user input data with an unknown directionality.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <p dir="ltr">Text on the left</p>
+        <p dir="rtl">Text on the right</p>
+        <p dir="auto">Text auto decided direction</p>
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/dirExample.png">
 
         <h3>Syntax:</h3>
-        <p>&lt; &gt;</p>
-
-        <br>
+        <p>&lt;element dir="ltr|rt1|auto"&gt;</p>
 
         <h3>Attribute values: </h3>
-        <p></p>
+        <p>ltr - Default. left to right text direction</p>
+        <p>rtl - right to left text direction</p>
+        <p>auto - Lets the browser figure out the text direction, based on the content(only recommended if the text direction is unknown)</p>
 
     </details>
     <details>
