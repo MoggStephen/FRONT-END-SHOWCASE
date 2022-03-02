@@ -28,6 +28,11 @@
                 document.getElementById('btn').style.backgroundColor='lightblue'; 
             }        
         }  
+
+        function showDetails(animal) {
+            var animalType = animal.getAttribute("data-animal-type");
+            alert("The " + animal.innerHTML + " is a " + animalType + ".");
+        }
    </script>  
     
     <title>Html Attributes</title>
@@ -77,7 +82,6 @@
         <h3>Syntax:</h3>
         <p>&lt;element class="classname"&gt;</p>
         
-
         <h3>Attribute values: </h3>
         <p>classname:</p>
         <p>specifies a classname for an element. To specify multiple classes, seperate the class name with a space. e.g. &lt;span class="left important"&gt;. This allows you to combine several css classes for one html element. There are naming rules of classes. Names must begin with a letter A-Z or a-z. They can be followed by: letters (A-Za-z, digits(0-9), hyphens("-") and underscores ("_").)</p>
@@ -86,47 +90,50 @@
     <details>
         <summary><b>contenteditable</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This attribute specifies whether the content of an element is editable or not. When this attribute is set on an element the element will inherit it from its parent. Below we see the affect of content editable true on a few elements.</p>
+        <p>Using javascript evet handlers a website can be transformed into a full and fast text editor. When an element has conteneditable set to true the document.execCommand() method is made available. This allows the manipulation of the content in the editable region. </p>
+        <p>If the attribute is missing then its value is inherited from its parent element. This means if you add a contenteditable true to a high level element this could mess up your whole website. This attribute is an enumerated one and not a boolean one. The color used to draw the text insertion caret(the blinking cursor for text) is set with the "caret-color" property.</p>
 
         <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <p contenteditable="true" style="caret-color: chartreuse;">random paragraph</p>
+        <button contenteditable="true">random button</button>
+        <h4 contenteditable="true">random heading</h4>
+        <img contenteditable="true" src="./0media/images/contenteditableImage.jpg" alt="random image">
+        <p contenteditable="true">This is how its coded:</p>
 
         <h3>Syntax:</h3>
-        <p>&lt; &gt;</p>
-
-        <br>
+        <p>&lt;element contenteditable="true|false"&gt;</p>
 
         <h3>Attribute values: </h3>
-        <p></p>
+        <p>true - specifies the element is editable</p>
+        <p>false - specifies the element is not editable</p>
 
     </details>
     <details>
         <summary><b>data-*</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This attribute is used to store custom data that is private to the page or application. It gives us the ability to embed custom data attributes on all html elements. The stored custom data can then be used to in the pages javascript to create a more engaging user experience.(without any ajax calls or server side database queries)</p>
+        <p>The attribute consists of 2 parts:</p>
+        <li>The attribute should not contain any uppercase letters and must be at least one character long after the prefix "data-"</li>
+        <li>The attribute value can be any string</li>
+        <li>The name must not contain any colon characters. ":"</li>
+        <p>Its important to note that custom attributes prefixed with "data-" will be completely ignored by the user agent</p>
+        <p>Using data-* can cause elements to become quite powerfull.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <p>Click on a a species to show what animal it is:</p>
+        <li onclick="showDetails(this)" data-animal-type="bird">Owl</li>
+        <li onclick="showDetails(this)" data-animal-type="fish">Salmon</li>  
+        <li onclick="showDetails(this)" data-animal-type="spider">Tarantula</li>  
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/data-Example.png">
+        <img src="./0media/images/data-Example2.png" alt="">
 
         <h3>Syntax:</h3>
-        <p>&lt; &gt;</p>
-
-        <br>
+        <p>&lt;element data-*="somevalue"&gt;</p>
 
         <h3>Attribute values: </h3>
-        <p></p>
+        <p>somevalue - specifies the value of the attribute (as a string)</p>
 
     </details>
     <details>
