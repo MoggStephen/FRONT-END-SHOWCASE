@@ -12,10 +12,23 @@
         .paragraph{
             color: cornflowerblue;
         }
+        .draggableBox {
+            width: 20%;
+            height: 70px;
+            
+            border: 1px solid #aaaaaa;
+        }
+        .container{
+            overflow: hidden;
+        }
+        .divFloat{
+            float: left;
+        }
     </style>
     <script language="javascript">  
         function ChangeColor()  
         {  
+            //Accesskey attribute
             var button = document.getElementById('btn');
             var colour = getComputedStyle(button);
             //rgb(173, 216, 230) === lightblue
@@ -29,9 +42,23 @@
             }        
         }  
 
+        //data-* attribute
         function showDetails(animal) {
             var animalType = animal.getAttribute("data-animal-type");
             alert("The " + animal.innerHTML + " is a " + animalType + ".");
+        }
+
+        //Draggable attribute
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        function drag(ev) {
+            ev.dataTransfer.setData("Text", ev.target.id);
+        }
+        function drop(ev) {
+            var data = ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+            ev.preventDefault();
         }
    </script>  
     
@@ -162,24 +189,30 @@
     <details>
         <summary><b>draggable</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>The draggable attribute specifies whether an element is draggable or not. Links and images are draggable by default. This is mostly used in drag and drop operations. It appears the draggable text needs to have an id in order to be draggable. With multiple draggable texts make sure they each have unique ids. This is how id should work anyways.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <div class="container">
+            <div class="draggableBox divFloat" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="draggableBox divFloat" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="draggableBox divFloat" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="draggableBox divFloat" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <p id="drag1" draggable="true" ondragstart="drag(event)">Draggable Text</p>
+        <p id="drag2" draggable="true" ondragstart="drag(event)">Draggable Text</p>
+        <p id="drag3" draggable="true" ondragstart="drag(event)">Draggable Text</p>
+        <p id="drag4" draggable="true" ondragstart="drag(event)">Draggable Text</p>
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
+        <img src="./0media/images/draggableExample.png" alt="HTML">
+        <img src="./0media/images/draggableClasses.png" alt="">
+        <img src="./0media/images/draggableJs.png" alt="">
         <h3>Syntax:</h3>
-        <p>&lt; &gt;</p>
-
-        <br>
+        <p>&lt;element draggable="true|false|auto"&gt;</p>
 
         <h3>Attribute values: </h3>
-        <p></p>
+        <p>true - specifies the element is draggable</p>
+        <p>false- specifies the element is not draggable</p>
+        <p>auto - uses the default behaviour of the browser</p>
 
     </details>
     <details>
