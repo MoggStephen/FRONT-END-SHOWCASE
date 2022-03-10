@@ -9,343 +9,188 @@
             background-color: antiquewhite;
         }
     </style>
+    <script language="javascript"> 
+        /////// onbeforeunload
+        window.addEventListener('beforeunload', function (e) 
+        {
+            // Cancel the event
+            e.preventDefault(); // If you prevent default behavior in Mozilla Firefox prompt will always be shown
+            // Chrome requires returnValue to be set
+            e.returnValue = '';
+        }); 
+        function onafterprint()  
+        {  
+            console.log("onafterprint triggered");  
+        } 
+        function onbeforeprint()  
+        {  
+            console.log("onbeforeprint triggered");  
+        }    
+        function onbeforeunload()  
+        {  
+            console.log("onbeforeunload triggered");  
+        }  
+        function onerror(){
+            console.log("onerror triggered");  
+        }
+        function onhashchange()  
+        {   
+            console.log("onhashchange triggered");  
+        }  
+        function onload()  
+        {  
+            console.log("onload triggered");  
+        }  
+        function onoffline()  
+        {  
+            console.log("onoffline triggered");  
+        }  
+        function ononline()  
+        {  
+            console.log("ononline triggered");  
+        }   
+        function onpageshow()  
+        {  
+            console.log("onpageshow triggered");  
+        }  
+        function onresize()  
+        {  
+            console.log("onresize triggered");  
+        } 
+        function onunload()  
+        {  
+            console.log("onunload triggered"); 
+            alert("onunload triggered"); 
+        }  
+    </script>
     
-    <title></title>
+    <title>Window Event attributes</title>
 </head>
-<body>
+<body 
+        onafterprint="onafterprint()"
+        onbeforeprint="onbeforeprint()"
+        onbeforeunload="onbeforeunload()"
+        onerror="onerror()"
+        onhashchange="onhashchange()"
+        onload="onload()"
+        onoffline="onoffline()"
+        ononline="ononline()"
+        onpageshow="onpageshow()"
+        onresize="onresize()"
+        onunload="onunload()">
     <h1>Window Event Attributes</h1>
     
     <details>
         <summary><b>onafterprint</b></summary>
 
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <p>This works after after "ctrl p" is pressed and print has been selected to close the print dialog.</p>
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onafterprint="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : body</p>
 
     </details>
     <details>
         <summary><b>onbeforeprint</b></summary>
         
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <p>This works straight after "ctrl p" is pressed.</p>
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onbeforeprint="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : body</p>
     </details>
     <details>
         <summary><b>onbeforeunload</b></summary>
         
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <p>This event fires when the document is about to be unloaded. To get this one to work i had to use a slightly different script that is based at the top of the script element. This works to bring up the dilaog box to show that the event works.</p>
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onbeforeunload="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : body</p>
     </details>
     <details>
         <summary><b>onerror</b></summary>
         
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <p>This happens when an error occurs on loading an external file, which can be seen with the following image and in the console.</p>
+        <img src="image.gif" onerror="onerror()">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onerror="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-    </details>
-    <details>
-        <summary><b>onhashchange</b></summary>
-        
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : img, input(type image), object, link and script</p>
     </details>
     <details>
         <summary><b>onload</b></summary>
         
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <p>This event executes immediately after a page has been loaded which can be seen inthe console.</p>
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onload="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-    </details>
-    <details>
-        <summary><b>onmessage</b></summary>
-        
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : body, frame, frameset, iframe, img, input(type image), link script and style</p>
     </details>
     <details>
         <summary><b>onoffline</b></summary>
         
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <p>This event is triggered when the connection ot the internet stops and the browser goes into work offline mode. This can be done in some browsers by choice.</p>
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onoffline="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : body</p>
     </details>
     <details>
         <summary><b>ononline</b></summary>
         
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <p>This event is executed when the browsers starts to work online from being offline. </p>
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element ononline="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-    </details>
-    <details>
-        <summary><b>onpagehide</b></summary>
-        
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : body</p>
     </details>
     <details>
         <summary><b>onpageshow</b></summary>
         
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <p>This event occurs when a user navigates to another webpage. This event occurs everytime a page is loaded unlike the onload event which sometimes doesnt due to loading frmo cache.</p>
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onpageshow="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-    </details>
-    <details>
-        <summary><b>onpopstate</b></summary>
-        
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : body</p>
     </details>
     <details>
         <summary><b>onresize</b></summary>
         
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <p>This event fires when the browser window is resized</p>
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onresize="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-    </details>
-    <details>
-        <summary><b>onstorage</b></summary>
-        
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : body</p>
     </details>
     <details>
         <summary><b>onunload</b></summary>
         
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <p>This event fires once a page has been unloaded or the browser window has been closed. It also occurs when navigating away from the page or submitting a form.</p>
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onunload="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : body</p>
     </details>
-
 </body>
 </html>
