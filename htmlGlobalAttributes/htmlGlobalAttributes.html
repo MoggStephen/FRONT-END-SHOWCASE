@@ -341,47 +341,49 @@
     <details>
         <summary><b>title</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>The title attribute specifies extra information about an element. This information is showns as a tooltip text when the mouse hovers over the element. The title attribute can be used on any html element</p>
+        <p>Hover over the elements in the examples!</p>
+        <p>Labeling iframe elements for assistive technology is done with this attribute</p>
+        <p>Providing a programatically associated label for an input element as a fallback for a real label.</p>
+        <p>Labeling controls in data tables</p>
+        <p>Multi line titles can be achieved by simply placing the title over 2 lines in code.</p>
+        <p>There are some accessibility concerns with the title element. People using touch devices/ navigating with keyboards/ navigating with assistive technology/ experiencing fine motor control impairment/ with cognitive concerns may have difficulty bringing the title up.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <p title="Random Text">Lorem ipsum dolor sit amet.</p>
+        <button title="Useless Button">Click Me!</button><br>
+        <b title="Bold Random Text">More Random Text</b>
+        <p title="multi line
+        title">Text with multi line title</p>
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/titleExample.png">
 
         <h3>Syntax:</h3>
-        <p>&lt; &gt;</p>
-
-        <br>
+        <p>&lt;element title="text"&gt;</p>
 
         <h3>Attribute values: </h3>
-        <p></p>
+        <p>text - a tooltip text for an element</p>
 
     </details>
     <details>
         <summary><b>translate</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>The translate element specifies whether a browser should translate text or not. When a different language is used on a website the browser will offer to translate ther website for you. The content that has had a translate attribute "no" on shall not be translated.</p>
+        <p>Translating the text to another language in your browser should prove to not translate the text that has the translate="no" on.</p>
 
         <h3>Examples:</h3>
+        <p translate="no">Non translated text</p>
+        <p translate="yes">Translated text</p>
         <img src="">
         <p>This is how its coded:</p>
         <img src="">
 
-        <br>
-
         <h3>Syntax:</h3>
-        <p>&lt; &gt;</p>
-
-        <br>
+        <p>&lt;element translate="yes|no"&gt;</p>
 
         <h3>Attribute values: </h3>
-        <p></p>
+        <p>yes - Specifies the content in the element should be translated</p>
+        <p>no - Specifies the content in the element should not be translated</p>
 
     </details>
 </body>
