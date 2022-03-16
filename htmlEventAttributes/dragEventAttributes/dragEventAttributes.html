@@ -8,197 +8,121 @@
         details[open] {
             background-color: antiquewhite;
         }
+        .dropTarget{
+            float:left; width: 20%; height: 35px; margin: 15px; padding: 10px; border: 1px solid black;
+        }
+        #scrollDiv{
+            border: 1px solid black;
+            width: 200px;
+            min-height: 250px;
+            max-height: 250px;
+            overflow: scroll;
+        }
     </style>
-    
+    <script lang="javascript">
+        function drag(ev){
+            console.log("ondrag triggered");
+        }
+        function dragend(ev){
+            console.log("ondragend triggered");
+        }
+        function dragcenter(ev){
+            console.log("ondragcenter triggered");
+            if (ev.target.className == "dropTarget") {
+                ev.target.style.border = "3px dotted red";
+            }
+        }
+        function dragleave(ev){
+            console.log("ondragleave triggered");
+            if (ev.target.className == "dropTarget") {
+                event.target.style.border = "";
+            }
+        }
+        function dragover(ev){
+            console.log("ondragover triggered");
+            ev.preventDefault();
+        }
+        function dragstart(ev){
+            console.log("ondragstart triggered");
+            ev.dataTransfer.setData("Text", ev.target.id);
+        }
+        function drop(ev){
+            console.log("ondrop triggered");
+            var data = ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+            ev.preventDefault();
+        }
+        function scroll(ev){
+            console.log("onscroll triggered");
+            document.getElementById("scrollDiv").style.color = "blue";
+        }
+    </script>
     <title>Drag Event Attributes</title>
 </head>
-<body>
+<body onscroll="scroll(event)"> 
     <h1>Drag Event Attributes</h1>
     
     <details>
-        <summary><b>ondrag</b></summary>
+        <summary><b>ondrag, ondragend, ondragcenter, ondragleave, ondragover, ondragstart, ondrop</b></summary>
 
-        <p></p>
+        <p>The drag and drop events are very common features in HTML5. It is when you "grab" an object and drag it to a different location. The draggable attribute must be used for the element to be draggable. Links and images are draggable by default.</p>
+        <p>The drag and drop events are available on all html elements.</p>
 
-        <br>
+        <h3>Events fired on the draggable target</h3>
+        <h4>ondragstart</h4>
+        <p>This event fires first when the user starts to drag an element or text selection.</p>
+        <h4>ondrag</h4>
+        <p>This event fires when an element is being dragged. While an element is being dragged the event fires every 350 milliseconds</p>
+        <h4>ondragend</h4>
+        <p>This fires when the user has finished dragging an element or text selection.</p>
 
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
-    </details>
-    <details>
-        <summary><b>ondragend</b></summary>
-
-        <p></p>
-
-        <br>
+        <h3>Events fired on the drop target.</h3>   
+        <h4>ondragcenter</h4>
+        <p>This fires when a draggable element or text selection enters a valid drop target. This event can be used to change the background colour of the draggable element to show when it has entered a drop target.</p>
+        <h4>ondragleave</h4>
+        <p>This fires when a draggable element or text selection leaves a valid drop target. This event can be used to change the background colour of the draggable element to show when it has left a drop target.</p>
+        <h4>ondragover</h4>
+        <p>This fires when a draggable element or text selection is being dragged over a valid drop target. By default data/elements cannot be dropped in oter elements. To allow this drop we must prevent the default handling of the element. This is done by calling the event.preventDefault() method for the ondragover attribute.</p>
+        <h4>ondrop</h4>
+        <p>This fires when a draggable element or text selection is dropped on a valid drop target. </p>
 
         <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
+        <div class="dropTarget" ondragenter="dragcenter(event)" ondragover="dragover(event)" ondragleave="dragleave(event)" ondrop="drop(event)"></div>
+        <div class="dropTarget" ondragenter="dragcenter(event)" ondragover="dragover(event)" ondragleave="dragleave(event)" ondrop="drop(event)"></div>
 
-        <br>
+        <p style="clear: both;" id="dragTarget" draggable="true" ondragstart="dragstart(event)" ondrag="drag(event)" ondragend="dragend(event)">draggable text</p>
 
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
-    </details>
-    <details>
-        <summary><b>ondragcenter</b></summary>
-
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p style="clear: both;">This is how its coded:</p>
+        <img src="./0media/images/dragEventExample1.png">
+        <img src="./0media/images/dragEventExample2.png" alt="">
+        <img src="./0media/images/dragEventExample3.png" alt="">
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
-    </details>
-    <details>
-        <summary><b>ondragleave</b></summary>
-
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
-    </details>
-    <details>
-        <summary><b>ondragover</b></summary>
-
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
-    </details>
-    <details>
-        <summary><b>ondragstart</b></summary>
-
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
-    </details>
-    <details>
-        <summary><b>ondrop</b></summary>
-
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : all HTML</p>
 
     </details>
     <details>
         <summary><b>onscroll</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires when an elements scrollbar is being scrolled. CSS overflow property can be used to create a scrollbar for an element.</p>
+        <p>For some reason i couldnt get this to fire on the div i created in the example. However putting this on the body element worked for the whole page.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <div id="scrollDiv" onscroll="scroll(event)">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam soluta laborum alias. Minus non ea voluptatum ipsam similique quaerat pariatur. Dolorum rem rerum optio vero consequatur a esse id animi?
+        Eligendi, quaerat error! Reprehenderit blanditiis asperiores ullam illum veniam eius libero inventore, provident, sunt ipsam optio illo ea corrupti expedita dolor cumque odit. Repudiandae, aspernatur voluptatibus modi officia aut veniam.
+        Ducimus quia sint facilis quo voluptatibus similique culpa iste non ex saepe, deleniti vero, eum laborum dolor odio impedit et nulla iure sapiente? In modi, nesciunt sed natus doloribus maxime.
+        Consectetur, vitae impedit. Facere itaque dignissimos illum aliquam quaerat at in beatae nam suscipit inventore veniam impedit recusandae, laboriosam atque cumque consequatur quisquam, nulla eaque tempore nobis necessitatibus exercitationem blanditiis?
+        Illum, omnis. Excepturi, ad eveniet? Quaerat blanditiis accusantium molestias quod commodi cupiditate quibusdam mollitia magni iusto soluta repellendus asperiores ducimus possimus aspernatur saepe, odio adipisci deserunt, voluptates fugiat aut. Ducimus.</div>
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/onScrollExample1.png">
+        <img src="./0media/images/onScrollExample2.png" alt="">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onscroll="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : address, blockquote, body, caption, center, dd, dir, div, dl, fieldset, form, h1 to h6, html, li, menu, object, ol, p, pre, select, tbody, textarea, tfoot, thead, ul.</p>
 
-    </details>
-    
+    </details>   
 </body>
 </html>
