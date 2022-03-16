@@ -9,7 +9,17 @@
             background-color: antiquewhite;
         }
     </style>
-    
+    <script lang="javascript">
+        function copy(){
+            console.log("onCopy triggered");
+        }
+        function cut(){
+            console.log("onCut triggered");
+        }
+        function paste(){
+            console.log("onPaste triggered");
+        }
+    </script>
     <title>Clipboard Event Attributes</title>
 </head>
 <body>
@@ -18,72 +28,73 @@
     <details>
         <summary><b>oncopy</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires when the user copies the content of an element</p>
+        <p>Thsi also fires when the user copies an element like an image.</p>
+        <p>The oncopy attribute is mostly used on input elements with type="text"</p>
+        <p>There are three ways to copy an element/the content of an element</p>
+        <li>CRTL + C</li>
+        <li>Select copy from the edit menu in your browser</li>
+        <li>Right click to display the context menu and select the "Copy" command</li>
 
         <h3>Examples:</h3>
-        <img src="">
+        <input type="text" oncopy="copy()" value="Try to copy this text"> 
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/oncopyExample1.png">
+        <img src="./0media/images/oncopyExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element oncopy="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : All HTML elements</p>
 
     </details>
     <details>
         <summary><b>oncut</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires when the user cuts the content of an element</p>
+        <p>Although the oncut attribute is supported by all HTML elements, it is not actually possible to cut the content of an element unless the conteteditable is set to true</p>
+        <p>The oncut attribute is mostly used on input element with the type="text"</p>
+        <p>There are three ways to cut the content of an element.</p>
+        <li>CTRL X</li>
+        <li>Select "Cut" from the edit menu in your browser</li>
+        <li>Right click to display the context menu and select the "Cut" command</li>
 
         <h3>Examples:</h3>
-        <img src="">
+        <input type="text" oncut="cut()" value="Try to cut this text"> 
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/oncutExample1.png">
+        <img src="./0media/images/oncutExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element oncut="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : All HTML elements</p>
 
     </details>
     <details>
         <summary><b>onpaste</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires when the user pastes some content in an element.</p>
+        <p>Although the onpaste is supported by all html elements its not possible to paste content in most elements unless it has the contenteditable to true</p>
+        <p>The onpaste attribute is mostly used on input nelements with the type="text"</p>
+        <p>There are 3 ways to paste content in an element:</p>
+        <li>CRTL V</li>
+        <li>Select "Paste" from the edit menu in your browser</li>
+        <li>Right click to display the context menu and select the "Paste" command.</li>
 
         <h3>Examples:</h3>
-        <img src="">
+        <input type="text" onpaste="paste()" value="Try to paste text"> 
         <p>This is how its coded:</p>
         <img src="">
 
-        <br>
-
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onpaste="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : All HTML elements</p>
 
     </details>
-
 </body>
 </html>
