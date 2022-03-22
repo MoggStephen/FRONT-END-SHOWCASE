@@ -53,13 +53,16 @@
         }
 
         //Draggable attribute
-        function allowDrop(ev) {
+        function dragover(ev) {
+            console.log("ondragover triggered");
             ev.preventDefault();
         }
-        function drag(ev) {
+        function dragstart(ev) {
+            console.log("ondragstart");
             ev.dataTransfer.setData("Text", ev.target.id);
         }
         function drop(ev) {
+            console.log("ondrop triggered");
             var data = ev.dataTransfer.getData("Text");
             ev.target.appendChild(document.getElementById(data));
             ev.preventDefault();
@@ -197,19 +200,19 @@
 
         <h3>Examples:</h3>
         <div class="container">
-            <div class="draggableBox divFloat" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-            <div class="draggableBox divFloat" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-            <div class="draggableBox divFloat" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-            <div class="draggableBox divFloat" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="draggableBox divFloat" ondrop="drop(event)" ondragover="dragover(event)"></div>
+            <div class="draggableBox divFloat" ondrop="drop(event)" ondragover="dragover(event)"></div>
+            <div class="draggableBox divFloat" ondrop="drop(event)" ondragover="dragover(event)"></div>
+            <div class="draggableBox divFloat" ondrop="drop(event)" ondragover="dragover(event)"></div>
         </div>
-        <p id="drag1" draggable="true" ondragstart="drag(event)">Draggable Text</p>
-        <p id="drag2" draggable="true" ondragstart="drag(event)">Draggable Text</p>
-        <p id="drag3" draggable="true" ondragstart="drag(event)">Draggable Text</p>
-        <p id="drag4" draggable="true" ondragstart="drag(event)">Draggable Text</p>
+        <p id="drag1" draggable="true" ondragstart="dragstart(event)">Draggable Text</p>
+        <p id="drag2" draggable="true" ondragstart="dragstart(event)">Draggable Text</p>
+        <p id="drag3" draggable="true" ondragstart="dragstart(event)">Draggable Text</p>
+        <p id="drag4" draggable="true" ondragstart="dragstart(event)">Draggable Text</p>
         <p>This is how its coded:</p>
         <img src="./0media/images/draggableExample.png" alt="HTML">
-        <img src="./0media/images/draggableClasses.png" alt="">
-        <img src="./0media/images/draggableJs.png" alt="">
+        <img src="./0media/images/draggableClasses.png" alt="styling">
+        <img src="./0media/images/draggableJs.png" alt="js">
         <h3>Syntax:</h3>
         <p>&lt;element draggable="true|false|auto"&gt;</p>
 

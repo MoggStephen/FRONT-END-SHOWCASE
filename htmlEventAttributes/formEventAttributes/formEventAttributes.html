@@ -9,6 +9,52 @@
             background-color: antiquewhite;
         }
     </style>
+    <script lang="javascript">
+        function blurr(ev){
+            console.log("onblur triggered.");
+            var x = document.getElementById("blurExample");
+            x.value = x.value.toUpperCase();
+        }
+        function change(){
+            console.log("onchange triggered");
+            var x = document.getElementById("select").value;
+            document.getElementById("onchangeP").innerHTML = "You selected: " + x;
+        }
+        function contextmenu(){
+            console.log("oncontextmenu triggered");           
+        }
+        function focuss(){
+            console.log("onfocus triggered");
+            var x = document.getElementById("onfocusExample"); 
+            x.style.backgroundColor = "yellow";
+        }
+        function input(){
+            console.log("oninput triggered");
+            var x = document.getElementById("oninputExample").value;
+            document.getElementById("oninputText").innerHTML = x;
+        }
+        function invalid(){
+            console.log("oninvalid triggered");
+            alert('You must fill out the form!');
+        }
+        function resett(){
+            console.log("onreset triggered");
+            alert("The form was reset");
+        }
+        function searchh(){
+            console.log("onsearch triggered");
+            var x = document.getElementById("oninputExample").value;
+            document.getElementById("oninputText").innerHTML = x;
+        }
+        function selectt(){
+            console.log("onselect triggered");
+            alert("You have selected some text!");
+        }
+        function submitt(){
+            console.log("onsubmit triggered");
+            alert("The form was submitted");
+        }
+    </script>
     
     <title>Form Event Attributes</title>
 </head>
@@ -18,233 +64,214 @@
     <details>
         <summary><b>onblur</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires the moment that the element loses focus. This is most often used with form validation code. (when a user leaves a form)</p>
+        <p>This event is the opposite of the onfocus event</p>
+        <p>The javascript function cannot be called "blur()". "blurr()" seemed to allow it to work.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <p>The text in the following input box will change to uppercase once the element loses focus.</p>
+        Enter your name: <input type="text" id="blurExample" onblur="blurr()">
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/onblurExample1.png">
+        <img src="./0media/images/onblurExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onblur="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : All HTML elements , EXCEPT: base, bdo, head, html, iframe, meta, param, script, style and title</p>
 
     </details>
     <details>
         <summary><b>onchange</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires the moment when the value of the element is changed</p>
+        <p>THis event is similar to oninput event, however the difference is that the oninput event occurs immediately after the value of an element has changed. While onchange occurs when the element loses focus the other difference is that the onchange event also works on select elements.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <select id="select" onchange="change()">
+            <option value="Audi">Audi
+            <option value="BMW">BMW
+            <option value="Mercedes">Mercedes
+            <option value="Volvo">Volvo
+        </select>
+        <p id="onchangeP"></p>
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/onchangeExample1.png">
+        <img src="./0media/images/onchangeExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onchange="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : "input type="textbox"", "input type="file"", "input type="password"", "input type="radio"", "input type="range"", "input type="search"", "input type="text", select and area  </p>
 
     </details>
     <details>
         <summary><b>oncontextmenu</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires when the user right clicks on an element to open the context menu.</p>
+        <p>Despite being available in all browsers, it seems to be currrently only supported in firefox.</p>
+        <p>Because this is only available in firefox this will not be coded.</p>
+        <p>This basically gives you a customisable right click menu.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <img src="./0media/images/oncontextmenuFirefox.png" alt="">
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/oncontextmenuExample1.png">
+        <img src="./0media/images/oncontextmenuExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element oncontextmenu="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : all HTML elements</p>
 
     </details>
     <details>
         <summary><b>onfocus</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires the moment when an element gets focus</p>
+        <p>Onfocus is most often used with input, select and a elements.</p>
+        <p>This attribute is the opposite of the onblur attribute.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <p>Input Text Here:</p>
+        <input id="onfocusExample" type="text" onfocus="focuss()">
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/onfocusExample1.png">
+        <img src="./0media/images/onfocusExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onfocus="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : All HTML elements but: base, bdo, br, head, html, iframe, meta, param, script, style and title</p>
 
     </details>
     <details>
         <summary><b>oninput</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires when an element gets user input</p>
+        <p>This attribute fires when the value of an input or textarea element is changed</p>
+        <p>THis is similar to the onchange event however the difference is that the oninput event occurs immediately after the value of an element has changed, while the onchange occurs when the element loses focus. The other difference is that the onchange also works on select elements.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <input type="text" id="oninputExample" oninput="input()">
+        <p id="oninputText"></p>
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/oninputExample1.png">
+        <img src="./0media/images/oninputExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element oninput="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : input type="password", input type="search", input type="text" and input type="textarea"</p>
 
     </details>
     <details>
         <summary><b>oninvalid</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires when a submittable  input element is invalid.</p>
+        <p>For example, the input field is invalid if the required attribute is set and the field is empty. The required attribute specifies that the input field must be filled out before submitting the form.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <p>Simply press submit without inputting anything to trigger the invalid event.</p> 
+        <form>
+            Name: <input type="text" oninvalid="invalid()" name="fname" required>
+            <input type="submit" value="Submit">
+        </form>
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/oninvalidExample1.png">
+        <img src="./0media/images/oninvalidExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element oninvalid="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : input</p>
 
     </details>
     <details>
         <summary><b>onreset</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires when a form is reset</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <form onreset="resett()">
+            Enter name: <input type="text">
+            <input type="reset">
+        </form>   
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/onresetExample1.png">
+        <img src="./0media/images/onresetExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onreset="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : form</p>
 
     </details>
     <details>
         <summary><b>onsearch</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires when a user presses the "ENTER" key or clicks the "x" button in an input element with type="search".</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <input type="search" id="oninputExample" onsearch="searchh()">
+        <p id="oninputText"></p>
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/onsearchExample1.png">
+        <img src="./0media/images/onsearchExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onsearch="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : input type="search"</p>
+
+        <img src="./0media/images/onsearchSupport.png" alt="">
 
     </details>
     <details>
         <summary><b>onselect</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires after some text has been selected in an element.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        Some text: <input type="text" value="Select me!!" onselect="selectt()">
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/onselectExample1.png">
+        <img src="./0media/images/onselectExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onselect="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : input type="file", input type="password", input type="text", input type="textarea".</p>
 
     </details>
     <details>
         <summary><b>onsubmit</b></summary>
 
-        <p></p>
+        <p>This event fires when a form is submitted</p>
 
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
+        <h3>Examples:</h3> 
+        <form onsubmit="submitt()">
+            Enter name: <input type="text" name="fname">
+            <input type="submit" value="Submit">
+        </form>
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/onsubmitExample1.png">
+        <img src="./0media/images/onsubmitExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onsubmit="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
+        <p>Supported Html Tags : form</p>
     </details>
-
 </body>
 </html>
