@@ -9,6 +9,21 @@
             background-color: antiquewhite;
         }
     </style>
+    <script>
+        var counter = 0;
+        function toggle(){
+            if (counter===0) 
+            {
+                console.log("The ontoggle event was triggered. It is now open!");
+                counter +=1;
+            } 
+            else 
+            {
+                console.log("The ontoggle event was triggered. It is now closed!");
+                counter = 0;
+            }
+        }
+    </script>
     
     <title>Misc Event Attributes</title>
 </head>
@@ -18,24 +33,23 @@
     <details>
         <summary><b>ontoggle</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires when the user opens or closes the details element</p>
+        <p>This element specifies additional details the user can view or hide on demand</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <details id="toggleExample" ontoggle="toggle()">
+            <summary>Open and close me!</summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, dolorem tempora placeat aliquam amet possimus adipisci officiis recusandae nulla. Praesentium voluptatum ex voluptatem nulla quae non eligendi quasi voluptates neque!</p>
+        </details>
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/toggleExample1.png">
+        <img src="./0media/images/toggleExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element ontoggle="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : details</p>
 
     </details>
 </body>
