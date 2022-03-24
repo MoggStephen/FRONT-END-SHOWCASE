@@ -9,196 +9,123 @@
             background-color: antiquewhite;
         }
     </style>
+    <script>
+        function mousedown(){
+            console.log("The mousedown event has been triggered!");
+        } 
+        function mouseup(){
+            console.log("The mouseup event has been triggered!");
+        } 
+        function mouseclick(){
+            console.log("The click event has been triggered!");
+            var x = document.getElementById("mouseClickExample");
+            x.style.backgroundColor = "Red";
+        }
+        function dblclick(){
+            console.log("The double click event has been triggered!");
+            var x = document.getElementById("mouseClickExample");
+            x.style.backgroundColor = "DodgerBlue";
+        }       
+        function mousemove(){
+            console.log("The mousemove event has been triggered!");
+        }
+        function mouseover(){
+            console.log("The mouseover event has been triggered!");
+        } 
+        function mouseout(){
+            console.log("The mouseout event has been triggered!");
+        }         
+        function wheel(){
+            console.log("The wheel event has been triggered!");
+            var x = document.getElementById("mouseImageExample");
+            if (x.style.height === "200px") 
+            {
+                x.style.height = "300px";
+            } 
+            else 
+            {
+                x.style.height = "200px";
+            }
+        }
+    </script>
     
     <title>Mouse Event Attributes</title>
 </head>
 <body>
     <h1>Mouse Event Attributes</h1>
+
+    <p>Move your mouse over and out of the image below. </p>
     
+
     <details>
-        <summary><b>onclick</b></summary>
+        <summary><b>onmousedown, onmouseup, onclick, ondblclick</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>These events fire simply on the click or double click of the left mouse button on an element</p>
+        <p>The order of these events are:</p>
+        <li>onmousedown</li>
+        <li>onmouseup</li>
+        <li>onclick</li>
+        <p>A double click goes through 2 full cycles of single click events to be triggered and the single click events will be triggered in the process!</p>
+        <p>A right click goes through the same events except an oncontextmenu is triggered after onmouseup.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+
+        <button id="mouseClickExample" onmousedown="mousedown()" onmouseup="mouseup()" onclick="mouseclick()" ondblclick="dblclick()" >SINGLE or DOUBLE CLICK ME!</button>
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
+        <img src="./0media/images/onclicksExample1.png">
+        <img src="./0media/images/onclicksExample2.png">
+        
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onmousedown="script"&gt;</p>
+        <p>&lt;element ondmouseup="script"&gt;</p>
+        <p>&lt;element onclick="script"&gt;</p>
+        <p>&lt;element ondblclick="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : All HTML elements, except: base, bdo, br, head, html, iframe, meta, param, script, style, and title</p>
 
     </details>
     <details>
-        <summary><b>ondblclick</b></summary>
+        <summary><b>onmouseover, onmousemove, onmouseout</b></summary>
 
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
-    </details>
-    <details>
-        <summary><b>onmousedown</b></summary>
-
-        <p></p>
-
-        <br>
+        <p>These events are triggered when the mouse pointer hovers over an element</p>
+        <p>The events are triggered in the following cycle.</p>
+        <li>onmouseover - moves into the element</li>
+        <li>onmousemove - moves on the element</li>
+        <li>onmouseout - moves out of the element</li>
 
         <h3>Examples:</h3>
-        <img src="">
+        <img src="./0media/images/randomImage.jpg" onmousemove="mousemove()" onmouseout="mouseout()" onmouseover="mouseover()">
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
+        <img src="./0media/images/onmouseExample1.png">
+        <img src="./0media/images/onmouseExample2.png">
 
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
-    </details>
-    <details>
-        <summary><b>onmousemove</b></summary>
-
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onmouseover="script"&gt;</p>
+        <p>&lt;element onmousehover="script"&gt;</p>
+        <p>&lt;element onmouseout="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
-    </details>
-    <details>
-        <summary><b>onmouseout</b></summary>
-
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
-    </details>
-    <details>
-        <summary><b>onmouseover</b></summary>
-
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
-    </details>
-    <details>
-        <summary><b>onmouseup</b></summary>
-
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
+        <p>Supported Html Tags : All HTML elements, except: base, bdo, br, head, html, iframe, meta, param, script, style, and title</p>
     </details>
     <details>
         <summary><b>onwheel</b></summary>
 
-        <p></p>
-
-        <br>
+        <p>This event fires when the wheel of the mouse is moved up or down when on an element.</p>
+        <p>This also is triggered by the use of a touchpad zooming in.</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <p>Use the scrollwheel whilst hovering over the image.</p>
+        <img id="mouseImageExample" style="height: 200px;" src="./0media/images/randomImage.jpg" onmousewheel="wheel()">
         <p>This is how its coded:</p>
         <img src="">
 
-        <br>
-
         <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <p>&lt;element onmousewheel="script"&gt;</p>
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
+        <p>Supported Html Tags : All HTML elements</p>
 
     </details>
-
 </body>
 </html>
