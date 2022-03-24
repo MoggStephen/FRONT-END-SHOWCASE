@@ -9,6 +9,17 @@
             background-color: antiquewhite;
         }
     </style>
+    <script>
+        function keydown(){
+            console.log("A key has been pressed down");
+        }
+        function keypress(){
+            console.log("A key has been pressed");
+        }
+        function keyup(){
+            console.log("A key has been released");
+        }
+    </script>
     
     <title>Keyboard Event Attributes</title>
 </head>
@@ -16,74 +27,27 @@
     <h1>Keyboard Event Attributes</h1>
     
     <details>
-        <summary><b>onkeydown</b></summary>
+        <summary><b>onkeydown, onkeypress, onkeyup</b></summary>
 
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
-    </details>
-    <details>
-        <summary><b>onkeypress</b></summary>
-
-        <p></p>
-
-        <br>
+        <h3>onkeydown</h3>
+        <p>This event fires initally when the user is pressing a key on the keyboard</p>
+        <p>Syntax - &lt;element onkeydown="script"&gt;</p>
+        <h3>onkeypress</h3>
+        <p>This event fires when the user presses a key on the keyboard</p>
+        <p>This event is not fired for all keys(ALT,CTRL,SHIFT,ESC) in all browsers. Use onkeydown to ensure whether the user has pressed a key.</p>
+        <p>Syntax - &lt;element onkeypress="script"&gt;</p>
+        <h3>onkeyup</h3>
+        <p>This event fires when the user releases a key on the keyboard</p>
+        <p>Syntax - &lt;element onkeyup="script"&gt;</p>
 
         <h3>Examples:</h3>
-        <img src="">
+        <input type="text" onkeydown="keydown()" onkeypress="keypress()" onkeyup="keyup()">
         <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
+        <img src="./0media/images/Example1.png">
+        <img src="./0media/images/Example2.png">
 
         <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
+        <p>Supported Html Tags : base, bdo, br, head, html, iframe, meta, param, script, style, title</p>
     </details>
-    <details>
-        <summary><b>onkeyup</b></summary>
-
-        <p></p>
-
-        <br>
-
-        <h3>Examples:</h3>
-        <img src="">
-        <p>This is how its coded:</p>
-        <img src="">
-
-        <br>
-
-        <h3>Syntax:</h3>
-        <p>None</p>
-
-        <br>
-
-        <h3>Technical Details</h3>
-        <p>Supported Html Tags : </p>
-
-    </details>
-
 </body>
 </html>
