@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssLessonsCSS.css">
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        
+        
+        function myFunction() {
+            //retrieves the top y co-ordinate from the navbar element
+            var navbar = document.getElementById("navbar");     
+            var sticky = navbar.offsetTop;
+
+            //compares top of navbar to current top of page
+            //to make the navbar fixed to the top of the page!
+            if (window.pageYOffset >= 153) {
+                navbar.classList.add("sticky")
+            } else if(window.pageYOffset <= 153){
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>HEADER</h1>
+        <p>Page to showcase understanding of css position attributes.</p>
+    </header>
+    <nav class="sticky">
+        <a class="home" href="">Link 1</a>
+        <a href="">Link 2</a>
+        <a href="">Link 3</a>
+    </nav>
+    
+    <section>asd</section>
+    <section>asd</section>
+    <section>asd</section>
+    <section>asd</section>
+    <section>asd</section>
+    <section>asd</section>
+
+</body>
+</html>

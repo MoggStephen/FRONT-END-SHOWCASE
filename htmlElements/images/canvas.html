@@ -6,31 +6,52 @@
     <meta name="author" content="Stephen Mogg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+
     <title>&lt;canvas&gt;</title>
 </head>
 
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Canvas - &lt;canvas&gt;</h1>
+    <p>The canvas element is used to draw graphics on the fly using javascript usually.</p>
+    <p>The canvas tag is transparent and is only a container for graphics. You must use a script to actually draw the graphics</p>
+    <p>The text inside the canvas element will be displayed in browsers with javascript disabled and in browsers that do not support canvas.</p>
+    <p>It seems the script needs to take place after the canvas element unless the canvas element wont load.</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <canvas id="canvasExample">Your browser does not support the canvas tag.</canvas>
+    <script>
+        var c = document.getElementById("canvasExample");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "red";
+        ctx.fillRect(20, 20, 75, 50);
+        
+        //Turn transparency on
+        ctx.globalAlpha = 0.2;
+        ctx.fillStyle = "blue"; 
+        ctx.fillRect(50, 50, 75, 50); 
+        ctx.fillStyle = "green"; 
+        ctx.fillRect(80, 80, 75, 50);
+    </script>
+
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/canvasExample.png">
 
     <br>
 
     <h2>Default Styling:</h2>
-    <p>None</p>
+    <img src="./media/defaultStyles/canvasDefault.png" alt="">
 
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>height - Specifies the hieght of the canvas. Default value is 150</p>
+    <p>Width - Specifies the width of the canvas. DEfault is 300</p>
+    <p>The global attributes are supported.</p>
+    <p>The event attributes are supported.</p>
     
 </body>
 </html>
