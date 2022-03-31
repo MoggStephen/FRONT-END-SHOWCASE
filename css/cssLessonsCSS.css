@@ -24,15 +24,13 @@ h1{
     margin: 0;
     padding:0;
 }
-p{
+header p{
     margin: 0;
     padding: 0;
+    position: relative;
+    top: 25px;
 
 }
-section{
-    height: 20%;
-}
-
 nav.sticky{
     display: flex;
     align-items: center;
@@ -62,6 +60,11 @@ nav a{
 nav a:hover{
     background-color: lightgrey;
 }
-.home{
+nav a.active{
     background-color: rgb(4, 143, 4);
+}
+
+div.border{
+    border: 2px solid red;
+    border-radius: 5px;
 }
