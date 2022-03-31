@@ -68,3 +68,19 @@ div.border{
     border: 2px solid red;
     border-radius: 5px;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
