@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --fs-cm-1: 0.5cm;
+            --fs-cm-2: 1.0cm;
+            --fs-cm-3: 1.5cm;
+
+            --fs-mm-1: 50mm;
+            --fs-mm-2: 100mm;
+            --fs-mm-3: 150mm;
+
+            --fs-in-1: 0.19685;
+            --fs-in-2: 0.393701;
+            --fs-in-3: 0.590551;
+
+            --fs-px-1: 25px;
+            --fs-px-2: 50px;
+            --fs-px-3: 75px;
+
+            --fs-pt-1: 15;
+            --fs-pt-2: 30;
+            --fs-pt-3: 45;
+
+            --fs-pc-1: 1.5;
+            --fs-pc-2: 3;
+            --fs-pc-3: 4.5;
+        }
+        .cm1{font-size: var(--fs-cm-1);}
+        .cm2{font-size: var(--fs-cm-2);}
+        .cm3{font-size: var(--fs-cm-3);}
+        
+        .mm1{font-size: var(--fs-mm-1);}
+        .mm2{font-size: var(--fs-mm-2);}
+        .mm3{font-size: var(--fs-mm-3);}
+
+        .in1{font-size: var(--fs-in-1);}
+        .in2{font-size: var(--fs-in-2);}
+        .in3{font-size: var(--fs-in-3);}
+
+        .px1{font-size: var(--fs-px-1);}
+        .px2{font-size: var(--fs-px-2);}
+        .px3{font-size: var(--fs-px-3);}
+
+        .pt1{font-size: var(--fs-pt-1);}
+        .pt2{font-size: var(--fs-pt-2);}
+        .pt3{font-size: var(--fs-pt-3);}
+
+        .pc1{font-size: var(--fs-pc-1);}
+        .pc2{font-size: var(--fs-pc-2);}
+        .pc3{font-size: var(--fs-pc-3);}
+    </style>
+</head>
+<body>
+    
+    <h1>CSS Untis explained</h1>
+    
+    <h2>Absolute lengths</h2>
+    <div style="background-color: antiquewhite;">
+        <h3>cm</h3>
+        <p style="font-size: 0.5cm">0.5cm</p>
+        <p style="font-size: 1cm">1.0cm</p>
+        <p style="font-size: 1.5cm">1.5cm</p>
+    </div>
+
+    <div style="background-color: antiquewhite;">
+        <h3>mm</h3>
+        <p style="font-size: 5mm">5mm</p>
+        <p style="font-size: 10mm">10mm</p>
+        <p style="font-size: 15mm;">15mm</p>
+    </div>
+
+    <div style="background-color: antiquewhite;">
+        <h3>in</h3>
+        <p style="font-size: 0.19685in">0.19685in</p>
+        <p style="font-size: 0.393701in">0.393701in</p>
+        <p style="font-size: 0.590551in">0.590551in</p>
+    </div>
+
+    <div style="background-color: antiquewhite;">
+        <h3>px</h3>
+        <p>px units are relative to the viewing device. Small resolution screens will count one device pixel of the display whilst larger resolution screens will count multiple.</p>
+        <p style="font-size: 25px">25px</p>
+        <p style="font-size: 50px">50px</p>
+        <p style="font-size: 75px">75px</p>
+    </div>
+
+    <div style="background-color: antiquewhite;">
+        <h3>pt</h3>
+        <p style="font-size: 10pt">10pt</p>
+        <p style="font-size: 30pt">30pt</p>
+        <p style="font-size: 45pt">45pt</p>
+    </div>
+
+    <div style="background-color: antiquewhite;">
+        <h3>pc</h3>
+        <p style="font-size: 1.5pc">1.5pc</p>
+        <p style="font-size: 3pc">3pc</p>
+        <p style="font-size: 4.5pc">4.5pc</p>
+    </div>
+
+    <h2>Relative lengths</h2>
+
+    <div style="background-color: antiquewhite;">
+        <h3>em</h3>
+        <p>em units are relative to the font-size of the element it is in. 2em means 2 times the size of the current font size.</p>
+        <p style="font-size: 1em;">1em</p>
+        <p style="font-size: 1.5em;">1.5em</p>
+        <p style="font-size: 2em;">2em</p>
+    </div>
+    <div id="xheight" style="background-color: antiquewhite;">
+        <h3>ex</h3>
+        <p>ex units are relative to the x-height of the current font. So 1ex would be the font size that fits into the height of the character 'x'.</p>
+        <p style="font-size: 1ex;">1ex</p>
+        <p style="font-size: 2ex;">2ex</p>
+        <p style="font-size: 3ex;">3ex</p>
+    </div>
+    <div style="background-color: antiquewhite;">
+        <h3>ch</h3>
+        <p>ch units are relative to the width of the character '0'. <a href="http://meyerweb.com/eric/thoughts/2012/05/15/defining-ch/">More information</a></p>
+        <p style="font-size: 1ch;">1ch</p>
+        <p style="font-size: 2ch;">2ch</p>
+        <p style="font-size: 3ch;">3ch</p>
+    </div>
+    <div style="background-color: antiquewhite;">
+        <h3>rem</h3>
+        <p>rem units are relative to the font size found at the root of the document. This is found in the body elemets styling.</p>
+        <p style="font-size: 1rem;">1rem</p>
+        <p style="font-size: 1.5rem;">1.5rem</p>
+        <p style="font-size: 2rem;">2rem</p>
+    </div>
+    <div style="background-color: antiquewhite;">
+        <h3>vw</h3>
+        <p>vw units are relative to the size of the width of the viewport (the browser).</p>
+        <p>After playing around with this element it seems 2 characters take up the full width at 100vw.</p>
+        <p>So at any given vw font size, roughly 2 characters fit into that width.</p>
+        <p style="font-size: 5vw;">5vw</p>
+        <p style="font-size: 10vw;">10vw</p>
+        <p style="font-size: 20vw;">20vw</p>
+    </div>
+    <div style="background-color: antiquewhite;">
+        <h3>vh</h3>
+        <p>vh units are relative the size of the height of the viewport. (the browser)</p>
+        <p>This seems to hold the same 2 characters in 100vh as vw.</p>
+        <p style="font-size: 5vh;">5vh</p>
+        <p style="font-size: 10vh;">10vh</p>
+        <p style="font-size: 20vh;">20vh</p>
+    </div>
+    <div style="background-color: antiquewhite;">
+        <h3>vmin</h3>
+        <p>Due to the nature of the viewports. Different viewports will have different sizes.</p>
+        <p>On a typical computer screen the width is larger than the height therefore vmin would choose the vh value as this is the smaller value.</p>
+        <p>Whereas on a mobile phone the vmin would choose the vw value as the width of the screen is smaller.</p>
+        <p style="font-size: 5vmin;">5vmin</p>
+        <p style="font-size: 10vmin;">10vmin</p>
+        <p style="font-size: 20vmin;">20vmin</p>
+    </div>
+    <div style="background-color: antiquewhite;">
+        <h3>vmax</h3>
+        <p>Due to the nature of the viewports. Different viewports will have different sizes.</p>
+        <p>On a typical computer screen the width is larger than the height therefore vmax would choose the w value as this is the larger value.</p>
+        <p>Whereas on a mobile phone the vmax would choose the vh value as the height of the screen is larger.</p>
+        <p style="font-size: 5vmax;">5vmax</p>
+        <p style="font-size: 10vmax;">10vmax</p>
+        <p style="font-size: 20vmax;">20vmax</p>
+    </div>
+    <div style="background-color: antiquewhite;">
+        <h3>%</h3>
+        <p>% units are relative to the parent element.</p>
+        <p style="font-size: 50%;">50%</p>
+        <p style="font-size: 100%;">100%</p>
+        <p style="font-size: 500%;">500%</p>
+    </div>
+
+</body>
+</html>

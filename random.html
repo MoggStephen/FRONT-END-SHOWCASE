@@ -4,10 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root{
+            --fs-xl: clamp(2.0rem, 10vw + 0.5rem, 7rem);
+            --fs-600: 2rem;
+            --fs-400: 1.5rem;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            text-align: center;
+            font-size: var(--fs-400);
+        }
+        h1{
+            font-size: var(--fs-xl);
+        }
+        p{
+            font-size: var(--fs-400);
+        }
+        button{
+            font-size: var(--fs-400);
+        }
+        @media (min-width: 40em){
+            :root {
+                --fs-600: 3rem;
+                --fs-400: 1.125rem;
+            }
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
-    <h1 style="font-size: 3em;">HEADER</h1>
-    
+    <h1>HEADER</h1>
+    <p>p underneath header</p>
+
+    <article>
+        <p>article content Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate libero enim id, commodi harum molestias pariatur laborum quibusdam cumque laboriosam.</p>
+    </article>
+
+    <div>
+        <p>Random content Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae magnam assumenda, neque in ipsam quis odio ratione distinctio. Laudantium magnam, molestias quos a adipisci laboriosam asperiores molestiae est accusamus facere!
+        Quis fugit asperiores, ullam quasi iusto soluta quod omnis. At earum recusandae aut magnam repellat obcaecati illo! Ea ratione esse suscipit, fugiat at cum deserunt inventore porro nemo iusto perspiciatis?
+        Quas quos, dolore harum reprehenderit laudantium aliquam voluptatibus tempora fugiat ut, sint quidem corrupti labore doloremque, blanditiis architecto officia consectetur. Suscipit aspernatur placeat facilis. Ullam, adipisci! Ullam consectetur laudantium odit.</p>
+    </div>
+
+    <button>Button</button>
 </body>
 </html>
