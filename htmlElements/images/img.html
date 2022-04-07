@@ -13,25 +13,42 @@
 <body>
 
     <h1>img - &lt;img&gt;</h1>
-    <p></p>
+    <p>This element is used to display a singular image.</p>
+    <p>Images are not technically inserted into a webpage. Images are linked to the webpage. The image tag creates a space for the referenced image.</p>
+    <p>There are 2 required attributes to the img tag.</p>
+    <p>The image tag requires the src and alt attributes.</p>
+    <p>You should always specify the height and width in the image tag. The page may flicker while the image loads.</p>
+    <p>This is probably down to the image element not creating the space for the referenced image, so when it does load it changes contents of the page.</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <img src="./media/examples/imgExample.png" alt="Random elephant picture." height="200px" width="auto">
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/imageExample2.png">
 
     <br>
 
     <h2>Default Styling:</h2>
-    <img src="./media/defaultStyles/imgDefault.png" alt="">
+    <img src="./media/defaultStyles/imgDefault.png" alt="img default style.">
 
     <br>
 
     <h2>Attributes:</h2>
     <p>The global attributes are supported.</p>
     <p>The event attributes are supported.</p>
+    <p>alt - This specifies alternate text for an image.</p>
+    <p>crossorigin - Allows images from third party sites that allow cross-origin access to be used with canvas.</p>
+    <p>height - Specifies a height for the image.</p>
+    <p>ismap - Specifies animage as a server side image map</p>
+    <p>loading - Specifies whether a browser should load an image immediately or defer loading of images until some conditions are met.</p>
+    <p>longdesc - Specifies a url to a detailed description of an image</p>
+    <p>reffererpolicy - Specifies which referrer information to use when fetching an image.</p>
+    <p>sizes - Specifies image sizes for different page layouts</p>
+    <p>src - Specifies the path to the image</p>
+    <p>srcset - Specifies a list of images files to use in different situations</p>
+    <p>usemap - Specifies an image as a client-side image map</p>
+    <p>width - Specifies the width of an image.</p>
     
 </body>
 </html>

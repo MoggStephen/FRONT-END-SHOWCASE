@@ -13,14 +13,21 @@
 <body>
 
     <h1>Map - &lt;map&gt;</h1>
-    <p></p>
+    <p>The map element is used to define an image map. An image map is an image with clickable areas.</p>
+    <p>The required name attribute of this element is associated with the img elements usemap attribute and creates a relationship between the image and the map.</p>
+    <p>The map element contains a number of area elements. These define the clickable areas in the image map.</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <img src="./media/images/mapPicture.png" width="145" height="126" alt="Planets" usemap="#planetmap">
+    <map name="planetmap">
+        <area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+        <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+        <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus">
+    </map>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/mapExample.png">
 
     <br>
 
@@ -30,6 +37,7 @@
     <br>
 
     <h2>Attributes:</h2>
+    <p>name - *Required. Specifies the name of the image map.</p>
     <p>The global attributes are supported.</p>
     <p>The event attributes are supported.</p>
     
