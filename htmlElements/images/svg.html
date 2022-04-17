@@ -13,15 +13,58 @@
 <body>
 
     <h1>Svg - &lt;svg&gt;</h1>
-    <p></p>
+    <p>This element defines a container for SVG graphics.</p>
+    <p>This has several methods for drawing paths,circles,text and graphic images.</p>
+    <p>Svg has some predefined shape elements that can be used.</p>
+    <li>Rectangle</li>
+    <li>Circle</li>
+    <li>Ellipse</li>
+    <li>Line</li>
+    <li>Polyline</li>
+    <li>Polygon</li>
+    <li>Path</li>
+    <p>These can be found below:</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
-    <p>This is how its coded:</p>
-    <img src="">
-
+    <h3>Draw a rectangle:</h3>
+    <svg width="400" height="100">
+        <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+    </svg>
+    <img src="./media/examples/svgRectangleExample.png">
+    <h3>Draw a circle:</h3>
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+    <img src="./media/examples/svgCircleExample.png">
+    <h3>Draw an ellipse:</h3>
+    <svg height="140" width="500">
+        <ellipse cx="200" cy="80" rx="100" ry="50"
+        style="fill:yellow;stroke:purple;stroke-width:2" />
+    </svg>
+    <img src="./media/examples/svgEllipseExample.png">
+    <h3>Draw a line:</h3>
+    <svg height="210" width="500">
+        <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+    </svg>
+    <img src="./media/examples/svgLineExample.png" alt="">
+    <h3>Draw a polyline:</h3>
+    <svg height="200" width="500">
+        <polyline points="20,20 40,25 60,40 80,120 120,140 200,180"
+        style="fill:none;stroke:black;stroke-width:3" />
+    </svg>
+    <img src="./media/examples/svgPolylineExample.png" alt="">
+    <h3>Draw a polygon:</h3>
+    <svg height="210" width="500">
+        <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" />
+    </svg>
+    <img src="./media/examples/svgPolygonExample.png" alt="">
+    <h3>Draw a path:</h3>
+    <svg height="210" width="400">
+        <path d="M150 0 L75 200 L225 200 Z" />
+    </svg>
+    <img src="./media/examples/svgPathExample.png" alt="">
     <br>
 
     <h2>Default Styling:</h2>
