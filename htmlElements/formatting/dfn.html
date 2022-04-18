@@ -12,25 +12,35 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
-
-    <br>
-
-    <h2>Examples:</h2>
-    <img src="">
-    <p>This is how its coded:</p>
-    <img src="">
+    <h1>Dfn- &lt;dfn&gt;</h1>
+    <p>Dfn stands for definition element. It specifies a term that is going to be defined within the content.</p>
+    <p>The nearest parent of the dfn element must also contain the definition for the term.</p>
+    <p>The term inside the dfn tag can be any of the following:</p>
+    
+    <ul>
+        <li><dfn>HTML</dfn> is the standard markup language for creating web pages.</li>
+        <img src="./media/examples/dfnExample1.png" alt="">
+        <li><dfn title="HyperText Markup Language">HTML</dfn> is the standard markup language for creating web pages.</li>
+        <img src="./media/examples/dfnExample2.png" alt="">
+        <li><dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn> is the standard markup language for creating web pages. 
+        <br>This allows for an abbreviation of the definition</li>
+        <img src="./media/examples/dfnExample3.png" alt="">
+        <li><dfn id="html-def">HTML</dfn> is the standard markup language for creating web pages.
+        <br>This allows an element to refer back to the the definition using the id.</li>
+        <p>Learn <a href="#html-def">HTML</a> now.</p>
+        <img src="./media/examples/dfnExample4.png" alt="">
+    </ul>
 
     <br>
 
     <h2>Default Styling:</h2>
-    <p>None</p>
+    <img src="./media/defaultStyles/dfnDefault.png" alt="">
 
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>The global attributes are supported.</p>
+    <p>The event attributes are supported</p>
     
 </body>
 </html>
