@@ -12,15 +12,21 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Rp - &lt;rp&gt;</h1>
+    <p>This elememt defines a ruby annotation.</p>
+    <p>It provides parenthesese around ruby text., to be shown by browsers that do not support ruby annotations.</p>
+    <p>Use rp together with ruby and rt.</p>
+    <p>This element consists of one or more characters that need explaining/pronunciation, and an rt element that gives that information and then an optional rp element to define what to show for browsers that do not suppport ruby annotations.</p>
+    <p>This is mostly used with japanese annotations.</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <ruby>
+        漢 <rp>(</rp><rt>ㄏㄢˋ</rt><rp>)</rp>
+    </ruby>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/rpExample.png">
 
     <br>
 
@@ -30,7 +36,8 @@
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>The global attributes are supported.</p>
+    <p>The event attributes are supported.</p>
     
 </body>
 </html>

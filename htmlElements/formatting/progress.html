@@ -12,15 +12,18 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Progress - &lt;progress&gt;</h1>
+    <p>This element defines a progress bar of a completed task.</p>
+    <p>Make sure to add the label text for best accessebility practice.</p>
+    <p>This can be used utilizing javascript to update progress. This is not meant for a gauge.</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <label for="file">Downloading progress:</label>
+    <progress id="file" value="32" max="100"> 32% </progress>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/progressExample.png">
 
     <br>
 
@@ -30,7 +33,10 @@
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>max - Specifies how much of the task is required in total.</p>
+    <p>value - Specifies how much of the task has been completed.</p>
+    <p>The global attributes are supported.</p>
+    <p>The event attributes are supported.</p>
     
 </body>
 </html>

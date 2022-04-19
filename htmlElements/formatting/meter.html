@@ -12,15 +12,19 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Meter - &lt;meter&gt;</h1>
+    <p>This element defines a scalar measurement within a known range or a fractional value. This is also known as a guage.</p>
+    <p>This is used in disk usage or the relevance of a query result etc.</p>
+    <p>This should not be used to indicate progress as in a progress bar. Progress bars should be done with the progress element.</p>
+    <p>Add a label for best accessebility practices</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <label for="Disk_D">Disk usage Disk_D:</label>
+    <meter id="Disk_D" value="600" min="0" max="1000">600Gb</meter>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/meterExample.png">
 
     <br>
 
@@ -30,7 +34,15 @@
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>form - Specifies which form the meter belongs to</p>
+    <p>high - Specifies the range that is considered to be  ahigh value</p>
+    <p>low - Specifies the range that is considered to be a low value</p>
+    <p>max - Specifies the maximum value of the range.</p>
+    <p>min - Specifies the minimum value of the range. Default value of the range. Default value is 0.</p>
+    <p>optimum - Specifies what value is the optimal value for tha guage.</p>
+    <p>value - Required attribute! Specifies the current value of the gauge.</p>
+    <p>The global attributes are supported.</p>
+    <p>The event attributes are supported.</p>
     
 </body>
 </html>
