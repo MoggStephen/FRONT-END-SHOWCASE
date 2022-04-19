@@ -12,15 +12,32 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Template - &lt;template&gt;</h1>
+    <p>This element is used a as a container to hold some html content that is is hidden from the user when the page loads.</p>
+    <p>The content inside this element can be rendered later with javascript.</p>
+    <p>You can use this element if you have code that you want to go over and over again, but not until you ask for it. To do this without the template element you need to create code with javascript to prevent the browser from rendering the code.</p>
+    <p>This content is visible when inspecting element.</p>
 
-    <br>
+    <br>S
 
     <h2>Examples:</h2>
-    <img src="">
+    <button onclick="showTemplate()">Show template content</button>
+
+    <template>
+        <h2>Flower</h2>
+        <img src="./media/img_white_flower.png">
+    </template>
+
+    <script>
+        function showTemplate() 
+        {
+            var temp = document.getElementsByTagName("template")[0];
+            var clon = temp.content.cloneNode(true);
+            document.body.appendChild(clon);
+        }
+    </script>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/templateExample.png">
 
     <br>
 
