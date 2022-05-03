@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Stephen Mogg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        sup{
+            font-size: smaller;
+            font-style: italic;
+            font-family: monospace;
+        }
+    </style>
+
+    <title>&lt;fieldSet&gt;</title>
+</head>
+
+<!-- &lt; &gt; -->
+<body>
+
+    <h1>Forms and input elements</h1>
+    <p></p>
+
+    <br>
+
+    <h2>&lt;form&gt;</h2>
+    <form action="/action" method="post">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <details>
+        <p>This element is used to create a html form which does a certain action upon submitting.</p>
+        <p>The input, textarea, button, select, option, optgroup, fieldset, label, output all can be nested in this element.</p>
+        <p>This is how its coded:</p>
+        <img src="./media/examples/formExample.png">  
+        <h2>Default Styling:</h2>
+        <img src="">
+        <h3>Attributes:</h3>
+        <p>accept-charset - specifies the character encodings that are to be used for the form submission</p>
+        <p>action - Specifies where to send the form-data when a form is submitted</p>
+        <p>autocompleted - specifies whether a form should have autocomplete on or off.</p>
+        <p>enctype - specifies how the form-data should be encoded when submitting it to the server only for method=post</p>
+        <p>method - specifies the http method to use when sending thr form data</p>
+        <p>name - specifies the name of a form</p>
+        <p>novalidate - specifies that the form should not be validated when submitted</p>
+        <p>rel - specifies the relationship between a linked resource and the current document</p>
+        <p>target - specifies where to display the response that is recieved after submitting the form.</p>
+        <p>The global attributes are supported.</p>
+        <p>The event attributes are supported.</p>
+    </details>
+    <hr>
+
+    <h2>&lt;input&gt;</h2>
+    <form action="">
+        <span>Text type => </span>
+        <input type="text" id="fname" name="fname"><br><br>
+        <span>button type => </span>
+        <input type="button" id="lname" name="lname"><br><br>
+        <span>checkbox type => </span>
+        <input type="checkbox">
+        <span>color type => </span>
+        <input type="color" id="" name=""><br><br>
+        <span>date type => </span>
+        <input type="date" id="" name=""><br><br>
+        <span>datetime-local type => </span>
+        <input type="datetime-local" id="" name=""><br><br>
+        <span>email type => </span>
+        <input type="email" id="" name=""><br><br>
+        <span>file type => </span>
+        <input type="file" id="" name=""><br><br>
+        <span>hidden type => </span>
+        <input type="hidden" id="" name=""><br><br>
+        <span>image type => </span>
+        <input type="image" id="" name=""><br><br>
+        <span>month type => </span>
+        <input type="month" id="" name=""><br><br>
+        <span>number type => </span>
+        <input type="number" id="" name=""><br><br>
+        <span>password type => </span>
+        <input type="password" id="" name=""><br><br>
+        <span>radio type => </span>
+        <input type="radio" id="" name=""><br><br>
+        <span>range type => </span>
+        <input type="range" id="" name=""><br><br>
+        <span>reset type => </span>
+        <input type="reset" id="" name=""><br><br>
+        <span>search type => </span>
+        <input type="search" id="" name=""><br><br>
+        <span>submit type => </span>
+        <input type="submit" id="" name=""><br><br>
+        <span>tel type => </span>
+        <input type="tel" id="" name=""><br><br>
+        <span>time type => </span>
+        <input type="time" id="" name=""><br><br>
+        <span>url type => </span>
+        <input type="url" id="" name=""><br><br>
+        <span>week type => </span>
+        <input type="week" id="" name=""><br><br>
+      </form>
+    <details>
+        <p>This element is the most important form element. It specifies a field where the user can enter data.</p>
+        <p>This field can be displayed in many ways depending on the type attribute. The types are:</p>
+        <li>text(default value)</li>
+        <li>button</li>
+        <li>checkbox</li>
+        <li>color</li>
+        <li>date</li>
+        <li>datetime-local</li>
+        <li>email</li>
+        <li>file</li>
+        <li>hidden</li>
+        <li>image</li>
+        <li>month</li>
+        <li>number</li>
+        <li>password</li>
+        <li>radio</li>
+        <li>range</li>
+        <li>reset</li>
+        <li>search</li>
+        <li>submit</li>
+        <li>tel</li>
+        <li>time</li>
+        <li>url</li>
+        <li>week</li>
+        <p>This is how its coded:</p>
+        <img src="./media/examples/inputExample.png">  
+        <h2>Default Styling:</h2>
+        <p>none</p>
+        <h3>Attributes:</h3>
+        <p>The global attributes are supported.</p>
+        <p>The event attributes are supported.</p>
+    </details>
+    <hr>
+    <h2>&lt;textarea&gt;</h2>
+    <textarea id="w3review" name="w3review" rows="8" cols="50">This is a text area with 8 rows and 50 columns.</textarea>
+    <details>
+        <p>This element defines an area for text.</p>
+        <p>This is how its coded:</p>
+        <img src="./media/examples/textAreaExample.png">  
+    </details>
+    <hr>
+
+    <h2>&lt;button&gt;</h2>
+    <button type="button">Click Me!</button>
+    <details>
+        <p>This element defines a clickable button</p>
+        <p>This is how its coded:</p>
+        <img src="./media/examples/buttonExample.png">  
+    </details>
+    <hr>
+
+    <h2>&lt;select&gt;</h2>
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars">
+    <optgroup label="Swedish Cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+    </optgroup>
+    <optgroup label="German Cars">
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </optgroup>
+    </select>
+    <details>
+        <p>This element defines a drop down select in has things to select</p>
+        <p>This is how its coded:</p>
+        <img src="./media/examples/selectExample.png">  
+    </details>
+    <hr>
+
+    <h2>&lt;optgroup&gt;</h2>
+    <select name="cars" id="cars">
+        <optgroup label="vauxhall">
+            <option value="corsa">Corsa</option>
+            <option value="astra">Astra</option>
+        </optgroup>
+        <optgroup label="lexus">
+            <option value="is200">is200</option>
+            <option value="is300">is300</option>
+        </optgroup>
+    </select>
+    <details>
+        <p>This element is used to group options of selectable rows within the select element.</p>
+        <p>This is how its coded:</p>
+        <img src="./media/examples/optgroupExample.png">  
+    </details>
+    <hr>
+
+    <h2>&lt;option&gt;</h2>
+    <select name="flower" id="">
+        <optgroup label="whiteflowers">
+            <option name="daisy" id="">daisy</option>
+            <option name="camellia" id="">camellia</option>
+        </optgroup>
+        <optgroup label="yellow flowers">
+            <option name="sunflowers" id="">sunflowers</option>
+            <option name="sunflowers" id="">sunflowers</option>
+        </optgroup>
+    </select>
+    <details>
+        <p>This element defines a selection value in the select element.</p>
+        <p>This is how its coded:</p>
+        <img src="./media/examples/optionExample.png">  
+        <h2>Default Styling:</h2>
+        <p>none</p>
+    </details>
+    <hr>
+
+    <h2>&lt;label&gt;</h2>
+    <form action="/action_page.php">
+        <label>
+            <input type="radio" id="PHP" name="fav_language" value="PHP">
+            PHP
+        </label><br>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    <details>
+        <p>This element is used to label form elements. The id attribute must match the attribute of the related element to bind them together. This can be done alternatively by placing the content in the label element.</p>
+        <p>This is how its coded:</p>
+        <img src="./media/examples/labelExample.png">  
+        <h2>Default Styling:</h2>
+        <img src="./media/defaultStyles/labelDefault.png">
+    </details>
+    <hr>
+
+    <h2>&lt;fieldset&gt;</h2>
+    <form action="/action_page.php">
+        <fieldset>
+          <legend>Personalia:</legend>
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname"><br><br>
+          <label for="lname">Last name:</label>
+          <input type="text" id="lname" name="lname"><br><br>      
+        </fieldset>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    <details>
+        <p>This element is used to group together elements in a form. It draws a box around them.</p>
+        <p>This is how its coded:</p>
+        <img src="./media/examples/fieldSetExample.png">  
+        <h2>Default Styling:</h2>
+        <img src="./media/defaultStyles/fieldSetDefault.png">
+    </details>
+    <hr>
+
+    <h2>&lt;legend&gt;</h2>
+    <form action="/action_page.php">
+        <fieldset>
+          <legend>Personalia:</legend>
+          <label for="fname">First name:</label>
+          <input type="text" id="fname" name="fname"><br><br>
+        
+          <input type="date" id="birthday" name="birthday"><br><br>
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
+    <details>
+        <p>This element defines a caption for the fieldset element.</p>
+        <p>This is how its coded:</p>
+        <img src="./media/examples/legendExample.png">  
+        <h2>Default Styling:</h2>
+        <img src="./media/defaultStyles/legendDefault.png">
+    </details>
+    <hr>
+
+    <h2>&lt;datalist&gt;</h2>
+    <label for="browser">Choose your browser from the list:</label>
+    <input list="browsers" name="browser" id="browser">
+    
+    <datalist id="browsers">
+      <option value="Edge">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+    <details>
+        <p>This element specifies predefined options for the input element. It offers automcompleted features for input elements.</p>
+        <p>Users will see drop-down list of pre-defined options as they input data.</p>
+        <p>The datalist element's id attribute must be equal to the input elements list attribute</p>
+        <p>This is how its coded:</p>
+        <img src="./media/examples/datalistExample.png">  
+        <h2>Default Styling:</h2>
+        <p>none</p>
+    </details>
+    <hr>
+
+    <h2>&lt;output&gt;</h2>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+
+        <sup>0</sup><input type="range" id="a" max="75" value="0"><sup>75</sup>
+        +<input type="number" id="b" value="25">
+        =<output name="x" for="a b"></output>
+        </form>
+    <details>
+        <p>This element is used to represent the result of a calculation within the form. A script would do this calculation then insert it into the output element.</p>
+        <p>This is how its coded:</p>
+        <img src="./media/examples/outputExample.png">  
+        <h2>Default Styling:</h2>
+        <img src="./media/defaultStyles/outputDefault.png">
+    </details>    
+</body>
+</html>
