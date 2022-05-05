@@ -12,25 +12,46 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Label - &lt;label&gt;</h1>
+    <p>The label element defines a label for the forms and input elements</p>
+    <p>Using labels benefits screen reader users so that the label will be read aloud appropriately.</p>
+    <p>Users who have difficulty clicking on very small regions such as checkboxes will be at aid as the the attached label element increases thje hitbox of the form element.</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <form action="">
+        <label>
+            <input type="radio" id="PHP" name="fav_language" value="PHP">
+            PHP
+        </label><br>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label><br><br>
+        <input type="submit" value="Submit">
+      </form>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/labelExample.png">
 
     <br>
 
     <h2>Default Styling:</h2>
-    <p>None</p>
+    <img src="./media/defaultStyles/labelDefault.png" alt="">
 
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>for - Specifies the id of the form element the label should be bound to</p>
+    <p>form - Specifies which form the label belongs to</p>
+    <p>The global attributes are supported. 
+        <a href="/htmlGlobalAttributes/htmlGlobalAttributes.html">Global</a>
+    </p>
+    <p>The event atttributes are suported.
+        <a href="/htmlEventAttributes/htmlEventAttributes.html">Event Attributes</a>
+    </p>
     
 </body>
 </html>

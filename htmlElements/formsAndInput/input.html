@@ -12,25 +12,108 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Input - &lt;input&gt;</h1>
+    <p>This element is the most important form element. It specifies a field where the user can enter data.</p>
+    <p>This field can be displayed in many ways depending on the type attribute. The types are:</p>
+    <p>Make sure to use the label tag to define the label for the input elements.</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <form action="">
+        <label for="fname">Text type => </label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">button type => </label>
+        <input type="button" id="lname" name="lname"><br><br>
+        <label for="chckbox">checkbox type => </label>
+        <input type="checkbox" id="chckbox">
+        <label for="color">color type => </label>
+        <input type="color" id="color" name=""><br><br>
+        <label for="date">date type => </label>
+        <input type="date" id="date" name=""><br><br>
+        <label for="datetime">datetime-local type => </label>
+        <input type="datetime-local" id="datetime" name=""><br><br>
+        <label for="email">email type => </label>
+        <input type="email" id="email" name=""><br><br>
+        <label for="file">file type => </label>
+        <input type="file" id="file" name=""><br><br>
+        <label for="hidden">hidden type => </label>
+        <input type="hidden" id="hidden" name=""><br><br>
+        <label for="image">image type => </label>
+        <input type="image" id="image" name=""><br><br>
+        <label for="month">month type => </label>
+        <input type="month" id="month" name=""><br><br>
+        <label for="number">number type => </label>
+        <input type="number" id="number" name=""><br><br>
+        <label for="password">password type => </label>
+        <input type="password" id="password" name=""><br><br>
+        <label for="radio">radio type => </label>
+        <input type="radio" id="radio" name=""><br><br>
+        <label for="range">range type => </label>
+        <input type="range" id="range" name=""><br><br>
+        <label for="reset">reset type => </label>
+        <input type="reset" id="reset" name=""><br><br>
+        <label for="search">search type => </label>
+        <input type="search" id="search" name=""><br><br>
+        <label for="submit">submit type => </label>
+        <input type="submit" id="submit" name=""><br><br>
+        <label for="tel">tel type => </label>
+        <input type="tel" id="tel" name=""><br><br>
+        <label for="time">time type => </label>
+        <input type="time" id="time" name=""><br><br>
+        <label for="url">url type => </label>
+        <input type="url" id="url" name=""><br><br>
+        <label for="week">week type => </label>
+        <input type="week" id="week" name=""><br><br>
+    </form>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/inputExample.png">  
 
     <br>
 
     <h2>Default Styling:</h2>
-    <p>None</p>
+    <img src="./media/defaultStyles/inputDefault.png" alt="">
 
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>accept - Specifies a filter for what file types the user can pick from the file input dialog box (only for type="file")</p>
+    <p>alt - Specifies an alternate text for images (only for type="image")</p>
+    <p>autocomplete - Specifies whether an input element should have autocomplete enabled</p>
+    <p>autofocus - Specifies that an input element should automatically get focus when the page loads</p>
+    <p>checked - Specifies that an input element should be pre-selected when the page loads (for type="checkbox" or type="radio")</p>
+    <p>dirname - Specifies that the text direction will be submitted</p>
+    <p>disabled - Specifies that an input element should be disabled</p>
+    <p>form - Specifies the form the input element belongs to</p>
+    <p>formaction - Specifies the URL of the file that will process the input control when the form is submitted (for type="submit" and type="image")</p>
+    <p>formenctype - Specifies how the form-data should be encoded when submitting it to the server (for type="submit" and type="image")</p>
+    <p>formmethod - Defines the HTTP method for sending data to the action URL (for type="submit" and type="image")</p>
+    <p>formnovalidate - Defines that form elements should not be validated when submitted</p>
+    <p>formtarget - Specifies where to display the response that is received after submitting the form (for type="submit" and type="image")</p>
+    <p>height - Specifies the height of an input element (only for type="image")</p>
+    <p>list - Refers to a datalist element that contains pre-defined options for an input element</p>
+    <p>max - Specifies the maximum value for an input element</p>
+    <p>maxlength - Specifies the maximum number of characters allowed in an input element</p>
+    <p>min - Specifies a minimum value for an input element</p>
+    <p>minlength - Specifies the minimum number of characters required in an input element</p>
+    <p>multiple - Specifies that a user can enter more than one value in an input element</p>
+    <p>name - Specifies the name of an input element</p>
+    <p>pattern - Specifies a regular expression that an input element's value is checked against</p>
+    <p>placeholder - Specifies a short hint that describes the expected value of an input element</p>
+    <p>readonly - Specifies that an input field is read-only</p>
+    <p>required - Specifies that an input field must be filled out before submitting the form</p>
+    <p>size - Specifies the width, in characters, of an input element</p>
+    <p>src - Specifies the URL of the image to use as a submit button (only for type="image")</p>
+    <p>step - Specifies the interval between legal numbers in an input field</p>
+    <p>type - Specifies the type input element to display</p>
+    <p>value - Specifies the value of an input element</p>
+    <p>width - Specifies the width of an input element (only for type="image")</p>
+    <p>The global attributes are supported. 
+        <a href="/htmlGlobalAttributes/htmlGlobalAttributes.html">Global</a>
+    </p>
+    <p>The event atttributes are suported.
+        <a href="/htmlEventAttributes/htmlEventAttributes.html">Event Attributes</a>
+    </p>
     
 </body>
 </html>

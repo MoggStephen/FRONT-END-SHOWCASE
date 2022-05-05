@@ -12,15 +12,25 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Optgroup - &lt;optgroup&gt;</h1>
+    <p>This element is used to group related options in a select element.</p>
+    <p>This is used when there are long list of options!</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <select name="cars" id="cars">
+        <optgroup label="vauxhall">
+            <option value="corsa">Corsa</option>
+            <option value="astra">Astra</option>
+        </optgroup>
+        <optgroup label="lexus">
+            <option value="is200">is200</option>
+            <option value="is300">is300</option>
+        </optgroup>
+    </select>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/optgroupExample.png">
 
     <br>
 
@@ -30,7 +40,14 @@
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>disabled - Specifies that an option-group should be disabled</p>
+    <p>label - Specifies a label for an option-group</p>
+    <p>The global attributes are supported. 
+        <a href="/htmlGlobalAttributes/htmlGlobalAttributes.html">Global</a>
+    </p>
+    <p>The event atttributes are suported.
+        <a href="/htmlEventAttributes/htmlEventAttributes.html">Event Attributes</a>
+    </p>
     
 </body>
 </html>

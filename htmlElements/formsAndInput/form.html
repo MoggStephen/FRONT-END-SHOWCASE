@@ -12,25 +12,47 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Form - &lt;form&gt;</h1>
+    <p>This element is used to create a html form which does a certain action upon submitting.</p>
+    <p>The input, textarea, button, select, option, optgroup, fieldset, label, output all can be nested in this element.</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <form action="/action" method="post">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+    </form>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/formExample.png"> 
 
     <br>
 
     <h2>Default Styling:</h2>
-    <p>None</p>
+    <img src="./media/defaultStyles/formDefault.png" alt="">
 
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>accept-charset - specifies the character encodings that are to be used for the form submission</p>
+    <p>action - Specifies where to send the form-data when a form is submitted</p>
+    <p>autocompleted - specifies whether a form should have autocomplete on or off.</p>
+    <p>enctype - specifies how the form-data should be encoded when submitting it to the server only for method=post</p>
+    <p>method - specifies the http method to use when sending thr form data</p>
+    <p>name - specifies the name of a form</p>
+    <p>novalidate - specifies that the form should not be validated when submitted</p>
+    <p>rel - specifies the relationship between a linked resource and the current document</p>
+    <p>target - specifies where to display the response that is recieved after submitting the form.</p>
+    <p>The global attributes are supported. 
+        <a href="/htmlGlobalAttributes/htmlGlobalAttributes.html">Global</a>
+    </p>
+    <p>The event atttributes are suported.
+        <a href="/htmlEventAttributes/htmlEventAttributes.html">Event Attributes</a>
+    </p>
+        
     
 </body>
 </html>

@@ -12,25 +12,41 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Datalist - &lt;datalist&gt;</h1>
+    <p>This element specifies predefined options for the input element. It offers automcompleted features for input elements.</p>
+    <p>Users will see drop-down list of pre-defined options as they input data.</p>
+    <p>The datalist element's id attribute must be equal to the input elements list attribute</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <label for="browser">Choose your browser from the list:</label>
+    <input list="browsers" name="browser" id="browser">
+    
+    <datalist id="browsers">
+      <option value="Edge">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/datalistExample.png">
 
     <br>
 
     <h2>Default Styling:</h2>
-    <p>None</p>
+    <img src="./media/defaultStyles/dataListDefault.png" alt="">
 
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>The global attributes are supported. 
+        <a href="/htmlGlobalAttributes/htmlGlobalAttributes.html">Global</a>
+    </p>
+    <p>The event atttributes are suported.
+        <a href="/htmlEventAttributes/htmlEventAttributes.html">Event Attributes</a>
+    </p>
     
 </body>
 </html>

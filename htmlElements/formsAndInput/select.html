@@ -12,15 +12,29 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Select - &lt;select&gt;</h1>
+    <p>This element is used to create a drop-down list</p>
+    <p>This is most often used in a form to collect user input</p>
+    <p>The name attribute is needed to reference the form data after the form is submitted.(if you omit the name attribute, no data from the drop-down list will be submitted)</p>
+    <p>The id attribute is needed to associated the drop-down list with a label.</p>
+    <p>The option tag inside of the select tag defines the available the available options in the drop-down list.</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars">
+    <optgroup label="Swedish Cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+    </optgroup>
+    <optgroup label="German Cars">
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </optgroup>
+    </select>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/selectExample.png">
 
     <br>
 
@@ -30,7 +44,19 @@
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>autofocus - Specifies that the drop-down list should automatically get focus when the page loads</p>
+    <p>disabled - Specifies that a drop-down list should be disabled</p>
+    <p>form - Defines which form the drop-down list belongs to</p>
+    <p>multiple - Specifies that multiple options can be selected at once</p>
+    <p>name - Defines a name for the drop-down list</p>
+    <p>required - 	Specifies that the user is required to select a value before submitting the form</p>
+    <p>size - Defines the number of visible options in a drop-down list</p>
+    <p>The global attributes are supported. 
+        <a href="/htmlGlobalAttributes/htmlGlobalAttributes.html">Global</a>
+    </p>
+    <p>The event atttributes are suported.
+        <a href="/htmlEventAttributes/htmlEventAttributes.html">Event Attributes</a>
+    </p>
     
 </body>
 </html>

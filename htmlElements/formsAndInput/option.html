@@ -12,15 +12,27 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Option - &lt;option&gt;</h1>
+    <p>This element defines an option within a select list.</p>
+    <p>This element is used inside of the select, optgroup or datalist elements.</p>
+    <p>The option tag can be used without any attributes, but you usually need the value attribute, which indicates what is sent to the server on form submission</p>
+    <p>Long lists of options can be displayed easier by grouping the optgroup element.</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <select name="flower" id="">
+        <optgroup label="whiteflowers">
+            <option name="daisy" id="">daisy</option>
+            <option name="camellia" id="">camellia</option>
+        </optgroup>
+        <optgroup label="yellow flowers">
+            <option name="sunflowers" id="">sunflowers</option>
+            <option name="sunflowers" id="">sunflowers</option>
+        </optgroup>
+    </select>
     <p>This is how its coded:</p>
-    <img src="">
+    <img src="./media/examples/optionExample.png">
 
     <br>
 
@@ -30,7 +42,16 @@
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>disabled - Specifies that an option should be disabled</p>
+    <p>label - Specifies a shorter label for an option</p>
+    <p>selected - Specifies that an option should be pre-selected when the page loads</p>
+    <p>value - Specifies the value to be sent to a server</p>
+    <p>The global attributes are supported. 
+        <a href="/htmlGlobalAttributes/htmlGlobalAttributes.html">Global</a>
+    </p>
+    <p>The event atttributes are suported.
+        <a href="/htmlEventAttributes/htmlEventAttributes.html">Event Attributes</a>
+    </p>
     
 </body>
 </html>
