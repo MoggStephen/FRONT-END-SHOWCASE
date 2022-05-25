@@ -12,25 +12,47 @@
 <!-- &lt; &gt; -->
 <body>
 
-    <h1> - &lt;&gt;</h1>
-    <p></p>
+    <h1>Iframe - &lt;iframe&gt;</h1>
+    <p>This element specifies an inline frame</p>
+    <p>AN inline frame is used to embed another document withint the current html document.</p>
+    <p>Css can be used to style this frame. It is also best practice to give a title attribute for this element so screen readers can read out what the content is.</p>
+    <p>A title tag is best to be used so that screen readers can read out what the content is of the iframe is.</p>
+    <p>Other websites typically do not allow to be used within an iframe. This is due to a X-Frame-Option header of DENY or SAMEORIGIN which is added from the server side.</p>
+    <p>DENY means no one can load the website in iframe, SAMEORIGIN means only a page which is in the same domain can load the website.</p>
 
     <br>
 
     <h2>Examples:</h2>
-    <img src="">
+    <p>Here is an iframe linked to the index of this website</p>
+    <iframe src="/index.html" title="index" style="border: 5px solid black"></iframe>
     <p>This is how its coded:</p>
     <img src="">
 
     <br>
 
     <h2>Default Styling:</h2>
-    <p>None</p>
+    <img src="./media/defaultStyles/iFrameDefault.png" alt="">
 
     <br>
 
     <h2>Attributes:</h2>
-    <p>The global attribute is supported.</p>
+    <p>allow - Specifies a feature policy for the iframe</p>
+    <p>allowfullscreen - Set to true if the iframe can activate fullscreen mode by calling the requestFullscreen() method</p>
+    <p>allowpaymentrequest - Set to true if a cross-origin iframe should be allowed to invoke the Payment Request API</p>
+    <p>height - Specifies the height of an iframe. Default height is 150 pixels</p>
+    <p>loading - Specifies whether a browser should load an iframe immediately or to defer loading of iframes until some conditions are met</p>
+    <p>name - Specifies the name of an iframe</p>
+    <p>reffererpolicy - Specifies which referrer information to send when fetching the iframe</p>
+    <p>sandbox - Enables an extra set of restrictions for the content in an iframe</p>
+    <p>src - Specifies the address of the document to embed in the iframe</p>
+    <p>srcdoc - Specifies the HTML content of the page to show in the iframe</p>
+    <p>width - 	Specifies the width of an iframe. Default width is 300 pixels</p>
+    <p>The global attributes are supported. 
+        <a href="/htmlGlobalAttributes/htmlGlobalAttributes.html">Global</a>
+    </p>
+    <p>The event atttributes are suported.
+        <a href="/htmlEventAttributes/htmlEventAttributes.html">Event Attributes</a>
+    </p>
     
 </body>
 </html>
